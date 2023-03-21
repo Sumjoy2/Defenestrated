@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
     private Rigidbody2D rb;
     public int totalHealth = 100;
     public int damage = 20;
-    private float speed = 3f;
+    public float speed = 3f;
 
 
     public Transform player;
