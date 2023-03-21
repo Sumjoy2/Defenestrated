@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
     public float speed = 3f;
 
 
-    public Transform player;
+    public Transform Player;
     private Vector2 movement;
 
 
@@ -25,7 +25,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 direction = player.position - transform.position;
+        Vector3 direction = Player.position - transform.position;
         Debug.Log(direction);
         direction.Normalize();
         movement = direction;
