@@ -5,7 +5,8 @@ using UnityEngine;
 public class Boss : MonoBehaviour
 {
     float invincibleTimer;
-    float timerTimer = 5;
+    public float timerTimer = 5;
+    public float timeTime = 5.0f;
 
     public int range;
     public GameObject protFire;
@@ -21,9 +22,14 @@ public class Boss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timerTimer <= 2.5f)
+        if (timerTimer <= 0f)
         {
             LaunchFireBall();
+            timerTimer = timeTime;
+        }
+        else if (timerTimer > 0)
+        {
+            timerTimer -= Time.deltaTime;
         }
     }
 

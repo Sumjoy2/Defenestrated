@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 1840597858}
   - component: {fileID: 1840597857}
   - component: {fileID: 1840597856}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Boss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -237,7 +237,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd65447a818d47b4d8d83ae4b8e0281a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 0
+  timerTimer: 5
+  timeTime: 5
+  range: 5
   protFire: {fileID: 5800578675605025380, guid: f3464f24fb075654a8d0709eb9a84c9e, type: 3}
   prot2: {fileID: 0}
 --- !u!61 &1840597857
@@ -324,13 +326,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1840597855}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.3805055, w: 0.9247787}
   m_LocalPosition: {x: 0, y: 4.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 44.73}
 --- !u!1001 &5800578676283140736
 PrefabInstance:
   m_ObjectHideFlags: 0
