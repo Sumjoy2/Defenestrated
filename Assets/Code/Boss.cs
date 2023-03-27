@@ -9,14 +9,13 @@ public class Boss : MonoBehaviour
     public float timeTime = 5.0f;
 
     public int range;
-    public GameObject protFire;
-    public GameObject prot2;
+    public GameObject[] attacks;
 
 
     // Start is called before the first frame update
     void Start()
     {
-
+        //attacks = GameObject.FindGameObjectsWithTag("BossProt");
     }
 
     // Update is called once per frame
@@ -40,7 +39,7 @@ public class Boss : MonoBehaviour
 
     void LaunchFireBall()
     {
-        GameObject fireball = Instantiate(protFire, transform.position, transform.rotation);
+        GameObject fireball = Instantiate(attacks[0], transform.position, transform.rotation);
         fireball.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector3(300, Random.Range(-range, range), 0));
     }
 }
