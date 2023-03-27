@@ -239,9 +239,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerTimer: 5
   timeTime: 2.5
-  range: 0
+  range: 75
   attacks:
   - {fileID: 5800578675605025380, guid: f3464f24fb075654a8d0709eb9a84c9e, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!61 &1840597857
 BoxCollider2D:
   m_ObjectHideFlags: 0
