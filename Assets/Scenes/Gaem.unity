@@ -132,7 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 534138}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -400,6 +400,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3dd24444d68e6c468cbbe2bdc02d5cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnRate: 1
+  timeBetweenWaves: 5
+  enemyCount: 0
+  enemy: {fileID: 2076281822836214175, guid: cf454dec5c4beff4c9a97aebc617786f, type: 3}
 --- !u!1 &413004885
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,7 +534,7 @@ GameObject:
   - component: {fileID: 537712334}
   - component: {fileID: 537712333}
   - component: {fileID: 537712336}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -829,9 +833,9 @@ GameObject:
   - component: {fileID: 1424541361}
   - component: {fileID: 1424541360}
   - component: {fileID: 1424541363}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
