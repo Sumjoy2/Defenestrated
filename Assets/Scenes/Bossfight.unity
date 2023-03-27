@@ -238,7 +238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerTimer: 5
-  timeTime: 5
+  timeTime: 2.5
   range: 5
   protFire: {fileID: 5800578675605025380, guid: f3464f24fb075654a8d0709eb9a84c9e, type: 3}
   prot2: {fileID: 0}
