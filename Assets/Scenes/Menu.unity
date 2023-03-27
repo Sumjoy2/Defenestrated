@@ -498,6 +498,7 @@ GameObject:
   - component: {fileID: 560447146}
   - component: {fileID: 560447145}
   - component: {fileID: 560447144}
+  - component: {fileID: 560447147}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -607,6 +608,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 560447142}
   m_CullTransparentMesh: 1
+--- !u!114 &560447147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560447142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 765011b21cf1d594791d5d97cccba168, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &575828385
 GameObject:
   m_ObjectHideFlags: 0
@@ -2359,7 +2372,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Max: Designer/Sound\nDJ: art/\n                                 "
+  m_Text: "Max: Designer/Sound\nDJ: Art/Sound\nRahma: code\nSage: code\n                                 "
 --- !u!222 &1893199092
 CanvasRenderer:
   m_ObjectHideFlags: 0
