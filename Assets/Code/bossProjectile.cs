@@ -15,7 +15,10 @@ public class bossProjectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (transform.position.magnitude > 75.0f)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D other)
