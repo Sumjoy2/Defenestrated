@@ -18,9 +18,6 @@ public class Player : MonoBehaviour
 
     Rigidbody2D rigidbody2d;
 
-    Vector2 moveDirection;
-    Vector2 mousePosition;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -33,8 +30,6 @@ public class Player : MonoBehaviour
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
 
-        moveDirection = new Vector2(horizontal, vertical).normalized;
-        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 
     void FixedUpdate()
@@ -44,10 +39,6 @@ public class Player : MonoBehaviour
         position.y = position.y + speed * vertical * Time.deltaTime;
         
         rigidbody2d.MovePosition(position);
-
-        Vector2 aimDirection = mousePosition - rigidbody2d.position;
-        float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 180f;
-        rigidbody2d.rotation = aimAngle;
     }
 
     private void LoadScene(string sceneName)
