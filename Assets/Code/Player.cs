@@ -18,6 +18,9 @@ public class Player : MonoBehaviour
 
     Rigidbody2D rigidbody2d;
 
+    Vector2 moveDirection;
+    Vector2 mousePosition;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +32,9 @@ public class Player : MonoBehaviour
     {
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
+
+        moveDirection = new Vector2(horizontal, vertical).normalized;
+        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
     }
 
