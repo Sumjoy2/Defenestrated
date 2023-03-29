@@ -4,12 +4,21 @@ using UnityEngine;
 
 public class Boss : MonoBehaviour
 {
+    Rigidbody2D rigidbody2d; //rigidbody
+
+    [Header("TimerStuff")]
     float invincibleTimer; // So Boss cant get hit in quick succession
     public float timerTimer = 5; // initial attack cooldown
     public float timeTime = 5.0f; // how often attack
 
+    [Header("AttackStuff")]
     public int range; // range of attacks
     public GameObject[] attacks; // array for attacks
+    public int randomattak;
+
+    [Header("TeleportStuff")]
+    public float cooldownTeleport = 10.0f; // How often boss teleports
+    public float teleportTime; //Teleportation timer
     /* important attack array info
      * 0 = projectile
      * 1 = enemy
@@ -19,25 +28,32 @@ public class Boss : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
     void Update()
     {
+
         //attack timer. Going to randomly select an attack from array
         if (timerTimer <= 0f)
         {
             //Randomly Selects 1 attack from the attack list
-            int i;
-            i = Random.Range(0, attacks.Length);
-            if (i == 0)
+            randomattak = Random.Range(0, attacks.Length);
+            if (randomattak == 0) // fireball
             {
                 LaunchFireBall();
             }
-            else if (i == 1)
+            else if (randomattak == 1) //suommon enemy
             {
                 SummonEnemies();
+            }
+            //teleportation
+            else if (randomattak == 2)
+            {
+                Teleport();
+                teleportTime = cooldownTeleport;
+                Debug.Log("Teleported");
             }
             timerTimer = timeTime;
         }
@@ -68,5 +84,12 @@ public class Boss : MonoBehaviour
         GameObject enemy = Instantiate(attacks[1], transform.position , transform.rotation); //summons on bosses location
         enemy.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector3(0, Random.Range(-range, range), 0)); // go less zoom
         Debug.Log("EmemySpawned");
+    }
+
+    //Boss Will teleport to random local
+    void Teleport()
+    {
+        transform.position = Random.insideUnitCircle *5;
+        Debug.Log("Teleported");
     }
 }
