@@ -218,6 +218,7 @@ GameObject:
   - component: {fileID: 1840597858}
   - component: {fileID: 1840597857}
   - component: {fileID: 1840597856}
+  - component: {fileID: 1840597860}
   m_Layer: 6
   m_Name: Boss
   m_TagString: Untagged
@@ -242,8 +243,11 @@ MonoBehaviour:
   range: 75
   attacks:
   - {fileID: 5800578675605025380, guid: f3464f24fb075654a8d0709eb9a84c9e, type: 3}
-  - {fileID: 2076281822836214175, guid: cf454dec5c4beff4c9a97aebc617786f, type: 3}
   - {fileID: 0}
+  - {fileID: 0}
+  randomattak: 0
+  cooldownTeleport: 10
+  teleportTime: 0
 --- !u!61 &1840597857
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -335,3 +339,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45}
+--- !u!50 &1840597860
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840597855}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

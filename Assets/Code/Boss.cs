@@ -15,15 +15,16 @@ public class Boss : MonoBehaviour
     public int range; // range of attacks
     public GameObject[] attacks; // array for attacks
     public int randomattak;
+    /* important attack array info
+     * 0 = projectile
+     * 1 = enemy
+     * 2 = hopefully teleport
+     */
 
     [Header("TeleportStuff")]
     public float cooldownTeleport = 10.0f; // How often boss teleports
     public float teleportTime; //Teleportation timer
-    /* important attack array info
-     * 0 = projectile
-     * 1 = enemy
-     * 
-     */
+    
 
     // Start is called before the first frame update
     void Start()
