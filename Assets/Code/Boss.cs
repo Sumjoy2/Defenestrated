@@ -4,56 +4,58 @@ using UnityEngine;
 
 public class Boss : MonoBehaviour
 {
-    Rigidbody2D rigidbody2d; //rigidbody
+    public bool isInvincible = false;
 
     [Header("TimerStuff")]
-    float invincibleTimer; // So Boss cant get hit in quick succession
     public float timerTimer = 5; // initial attack cooldown
     public float timeTime = 5.0f; // how often attack
+    float invincibleTimer; // So Boss cant get hit in quick succession
 
-    [Header("AttackStuff")]
+    [Header("0 = projectile, 1 = enemy, 2 = teleport, 3 = laser")]
+    public GameObject[] attacks; // array for attack
+    public int randomattak; // showing what attack is gonna happen
     public int range; // range of attacks
-    public GameObject[] attacks; // array for attacks
-    public int randomattak;
     /* important attack array info
      * 0 = projectile
      * 1 = enemy
-     * 2 = hopefully teleport
+     * 2 = teleport
+     * 3 = laserr
      */
 
     [Header("TeleportStuff")]
     public float cooldownTeleport = 10.0f; // How often boss teleports
     public float teleportTime; //Teleportation timer
-    
+    public bool canTeleport; // ability to teleport
 
+    Rigidbody2D rigidbody2d; //rigidbody
     // Start is called before the first frame update
     void Start()
     {
-       
+        rigidbody2d = GetComponent<Rigidbody2D>(); // makes rigidbody work
     }
 
     // Update is called once per frame
     void Update()
     {
-
         //attack timer. Going to randomly select an attack from array
         if (timerTimer <= 0f)
         {
             //Randomly Selects 1 attack from the attack list
             randomattak = Random.Range(0, attacks.Length);
-            if (randomattak == 0) // fireball
+            //fireball
+            if (randomattak == 0)
             {
                 LaunchFireBall();
             }
-            else if (randomattak == 1) //suommon enemy
+            //suommon enemy
+            else if (randomattak == 1) 
             {
                 SummonEnemies();
             }
             //teleportation
-            else if (randomattak == 2)
+            else if (canTeleport == true && randomattak == 2 && teleportTime <= 0)
             {
                 Teleport();
-                teleportTime = cooldownTeleport;
                 Debug.Log("Teleported");
             }
             timerTimer = timeTime;
@@ -63,6 +65,11 @@ public class Boss : MonoBehaviour
         {
             timerTimer -= Time.deltaTime;
         }
+        //teleport timer countdown
+        if (teleportTime > 0)
+        {
+            teleportTime -= Time.deltaTime;
+        }
     }
 
     //When the boss gets hit by something do this
@@ -71,7 +78,7 @@ public class Boss : MonoBehaviour
         Debug.Log("Boss Got Hit", other.otherCollider);
     }
 
-    // Currently setup to launch a projectile
+    // Currently setup to launch a im assuming fireball
     void LaunchFireBall()
     {
         GameObject fireball = Instantiate(attacks[0], transform.position, transform.rotation); //summons from boss local
@@ -90,7 +97,16 @@ public class Boss : MonoBehaviour
     //Boss Will teleport to random local
     void Teleport()
     {
-        transform.position = Random.insideUnitCircle *5;
+        rigidbody2d.position = Random.insideUnitCircle * 5;
         Debug.Log("Teleported");
+        teleportTime = cooldownTeleport;
+    }
+
+    //launch laser, smaller does more damage
+    void laser()
+    {
+        GameObject fireball = Instantiate(attacks[3], transform.position, transform.rotation); //summons from boss local
+        fireball.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector3(300, Random.Range(-range, range), 0)); // makes go zoom
+        Debug.Log("LaserSent");
     }
 }
