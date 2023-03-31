@@ -36,6 +36,10 @@ public class Player : MonoBehaviour
         moveDirection = new Vector2(horizontal, vertical).normalized;
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
+        if (Input.GetButtonDown("Submit"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 
     void FixedUpdate()
