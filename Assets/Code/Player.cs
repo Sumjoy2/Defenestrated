@@ -45,6 +45,10 @@ public class Player : MonoBehaviour
         position.y = position.y + speed * vertical * Time.deltaTime;
         
         rigidbody2d.MovePosition(position);
+
+        Vector2 aimDirection = mousePosition - rigidbody2d.position;
+        float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
+        rigidbody2d.rotation = aimAngle;
     }
 
     private void LoadScene(string sceneName)
