@@ -9,7 +9,13 @@ public class Player : MonoBehaviour
     float horizontal;
     float vertical;
 
-    public int health = 100;
+    //HP stuff
+    public int maxHealth = 100;
+    //current player health
+    public int curHealth;
+    int damage = 15;
+    public HealthBar healthBar;
+
     public float expirence = 0;
     public float speed = 3.5f;
 
@@ -25,6 +31,8 @@ public class Player : MonoBehaviour
     void Start()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
+        curHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     // Update is called once per frame
@@ -58,5 +66,11 @@ public class Player : MonoBehaviour
     private void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+    }
+
+    void OnCollisionEnter2D()
+    {
+        curHealth -= damage;
+        healthBar.SetHealth(curHealth);
     }
 }

@@ -25,7 +25,7 @@ public class Bullet : MonoBehaviour
     //when hits something deletes projectile
     void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log("BulletHitSomething");
+        //Debug.Log("BulletHitSomething");
         Destroy(gameObject);
     }
 }

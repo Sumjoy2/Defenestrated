@@ -1,13 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
     GameObject player;
+    GameObject bullet;
     public float speed = 2f;
     private Rigidbody2D rb;
     private Vector3 movement;
+
+    //health
+    public int maxHealth = 100;
+    public int curHealth;
+    int damage = 20;
 
 
     // Start is called before the first frame update
@@ -16,6 +23,8 @@ public class Enemy : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         player = GameObject.Find("Player");
+
+        curHealth = maxHealth;
     }
 
     // Update is called once per frame
@@ -29,6 +38,11 @@ public class Enemy : MonoBehaviour
         //movement = direction;
 
         moveCharacter();
+
+        if (curHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void FixedUpdate()
@@ -40,7 +54,12 @@ public class Enemy : MonoBehaviour
     {
         movement = (player.transform.position - transform.position).normalized;
         rb.velocity = new Vector2(movement.x * speed, movement.y * speed);
-        
+
         //rb.MovePosition((Vector2)transform.position + (direction * speed * Time.deltaTime));
+    }
+
+    void OnCollisionEnter2D()
+    {
+        curHealth -= damage;       
     }
 }
