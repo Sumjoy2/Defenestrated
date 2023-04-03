@@ -69,8 +69,8 @@ public class Player : MonoBehaviour
     }
 
     void OnCollisionEnter2D()
-    {
+    {               
         curHealth -= damage;
-        healthBar.SetHealth(curHealth);
+        healthBar.SetHealth(curHealth);        
     }
 }
