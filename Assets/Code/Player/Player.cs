@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
     float horizontal;
     float vertical;
 
+    public Gun gun;
+
     //HP stuff
     public int maxHealth = 100;
     //current player health
@@ -71,7 +73,21 @@ public class Player : MonoBehaviour
     void OnCollisionEnter2D()
     {               
         curHealth -= damage;
-        healthBar.SetHealth(curHealth);        
+        healthBar.SetHealth(curHealth);
+        if(curHealth <= 0)
+        {
+            PauseGame();
+            /*
+            if (Input.GetMouseButtonDown(0))
+            {
+                gun.Fire() = false;
+            }
+            if (Input.GetMouseButtonUp(0))
+            {
+                gun.Fire() = false;
+            }
+            */
+        }       
     }
 
     // https://gamedevbeginner.com/the-right-way-to-pause-the-game-in-unity/

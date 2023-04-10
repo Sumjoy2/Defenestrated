@@ -1530,6 +1530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcf8df62886354b4780b228205512037, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gun: {fileID: 0}
   maxHealth: 100
   curHealth: 0
   healthBar: {fileID: 545419832}
