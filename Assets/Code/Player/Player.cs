@@ -73,4 +73,14 @@ public class Player : MonoBehaviour
         curHealth -= damage;
         healthBar.SetHealth(curHealth);        
     }
+
+    // https://gamedevbeginner.com/the-right-way-to-pause-the-game-in-unity/
+    void PauseGame()
+    {
+        Time.timeScale = 0;
+    }
+    void ResumeGame()
+    {
+        Time.timeScale = 1;
+    }
 }
