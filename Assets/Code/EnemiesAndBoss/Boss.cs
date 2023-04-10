@@ -75,7 +75,7 @@ public class Boss : MonoBehaviour
     //When the boss gets hit by something do this
     private void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log("Boss Got Hit", other.otherCollider);
+        Debug.Log("Boss Got Hit" + other.otherCollider);
     }
 
     // Currently setup to launch a im assuming fireball
