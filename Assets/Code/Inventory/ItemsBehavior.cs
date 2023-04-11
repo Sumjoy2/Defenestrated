@@ -8,6 +8,7 @@ using UnityEngine;
 public class ItemsBehavior : MonoBehaviour
 {
     private Player player;
+    public Transform movingPlayer;
     
     public GameObject granade;
     public GameObject gun;
@@ -17,6 +18,7 @@ public class ItemsBehavior : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        //movingPlayer = GameObject.Find("Player").transform.position;
     }
 
     // Update is called once per frame
@@ -41,14 +43,8 @@ public class ItemsBehavior : MonoBehaviour
 
     public void UseGun()
     {
-        //gun.transform.SetParent(player.transform.parent);
-        //player.transform.parent = gun.transform;
-        //player.transform.localPosition = Vector2.zero;
-
-        //Instantiate(gun, player.position, player.transform, player);
-        //gun.transform.SetParent(player.transform.parent);
+        //Instantiate(gun, movingPlayer.position, movingPlayer.rotation, movingPlayer.transform);
+        gameObject.tag = "PlayerProjectile";
         Destroy(gameObject);
-
-
     }
 }

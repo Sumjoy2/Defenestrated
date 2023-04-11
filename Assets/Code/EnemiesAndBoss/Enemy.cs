@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Security.Cryptography;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -58,8 +57,11 @@ public class Enemy : MonoBehaviour
         //rb.MovePosition((Vector2)transform.position + (direction * speed * Time.deltaTime));
     }
 
-    void OnCollisionEnter2D()
+    void OnCollisionEnter2D(Collision2D other)
     {
-        curHealth -= damage;       
+        if (other.gameObject.CompareTag("PlayerProjectile"))
+        {
+            curHealth -= damage;
+        }               
     }
 }
