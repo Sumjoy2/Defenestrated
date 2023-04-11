@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Boss : MonoBehaviour
 {
+    [Header("HealthStuff")]
     public bool isInvincible = false;
+    public float helth = 250.0f;
 
     [Header("TimerStuff")]
     public float timerTimer = 5; // initial attack cooldown
