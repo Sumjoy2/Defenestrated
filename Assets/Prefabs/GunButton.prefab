@@ -161,3 +161,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   granade: {fileID: 2187544520465602695, guid: 2799f5de7913d28419fc8b706f23f7cf, type: 3}
   gun: {fileID: 3661691034411511470, guid: 905891bc16c5ed84ba4caf5c6f410619, type: 3}
+  bullet: {fileID: 8550436578927525201, guid: 830419ddfd404b243a2cff8e5ea996b4, type: 3}

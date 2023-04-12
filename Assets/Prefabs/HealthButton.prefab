@@ -159,3 +159,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e501e1fb7e58c8f49950a792122108dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  granade: {fileID: 867093694730347471, guid: 7a3bec6c65cd8c14c8bb940ab0c7f9be, type: 3}
+  gun: {fileID: 3661691034411511470, guid: 905891bc16c5ed84ba4caf5c6f410619, type: 3}
+  bullet: {fileID: 8550436578927525201, guid: 830419ddfd404b243a2cff8e5ea996b4, type: 3}

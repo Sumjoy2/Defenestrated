@@ -61,7 +61,7 @@ public class Player : MonoBehaviour
         rigidbody2d.MovePosition(position);
 
         Vector2 aimDirection = mousePosition - rigidbody2d.position;
-        float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
+        float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg + 90f;
         rigidbody2d.rotation = aimAngle;
     }
 
