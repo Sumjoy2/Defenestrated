@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     public int maxHealth = 100;
     //current player health
     public int curHealth;
-    int damage = 15;
+    public int damage = 15;
     public HealthBar healthBar;
 
     public float expirence = 0;
