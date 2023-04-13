@@ -70,24 +70,28 @@ public class Player : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
-    void OnCollisionEnter2D()
-    {               
-        curHealth -= damage;
-        healthBar.SetHealth(curHealth);
-        if(curHealth <= 0)
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("EnemyProjectile") || other.gameObject.CompareTag("Enemy"))
         {
-            PauseGame();
-            /*
-            if (Input.GetMouseButtonDown(0))
+            curHealth -= damage;
+            healthBar.SetHealth(curHealth);
+            if (curHealth <= 0)
             {
-                gun.Fire() = false;
+                PauseGame();
+                /*
+                if (Input.GetMouseButtonDown(0))
+                {
+                    gun.Fire() = false;
+                }
+                if (Input.GetMouseButtonUp(0))
+                {
+                    gun.Fire() = false;
+                }
+                */
             }
-            if (Input.GetMouseButtonUp(0))
-            {
-                gun.Fire() = false;
-            }
-            */
-        }       
+        }
+              
     }
 
     // https://gamedevbeginner.com/the-right-way-to-pause-the-game-in-unity/
