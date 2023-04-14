@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     public int maxHealth = 100;
     //current player health
     public int curHealth;
-    public int damage = 15;
+    public int damage = 20;
     public HealthBar healthBar;
 
     public float expirence = 0;
@@ -61,7 +61,7 @@ public class Player : MonoBehaviour
         rigidbody2d.MovePosition(position);
 
         Vector2 aimDirection = mousePosition - rigidbody2d.position;
-        float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg + 90f;
+        float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
         rigidbody2d.rotation = aimAngle;
     }
 
