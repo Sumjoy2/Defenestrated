@@ -51,12 +51,12 @@ public class ItemsBehavior : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void UseGun()
+    /*public void UseGun()
     {
         //make it spawn in world/locat coordinate, test to see if it changes where the gun spawns
         GameObject go = Instantiate(gun, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
         go.transform.parent = GameObject.Find("Player").transform;
         gameObject.tag = "PlayerProjectile";
         Destroy(gameObject);
-    }
+    }*/
 }

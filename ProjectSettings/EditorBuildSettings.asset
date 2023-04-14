@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Bossfight.unity
     guid: 06e79a907f7f42a42bf7e034cc479459
+  - enabled: 1
+    path: Assets/Scenes/Trap.unity
+    guid: 835240f92cb155243bb0a00eca2e4379
   m_configObjects: {}

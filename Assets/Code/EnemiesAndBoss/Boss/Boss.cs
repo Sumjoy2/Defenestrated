@@ -6,7 +6,9 @@ public class Boss : MonoBehaviour
 {
     [Header("HealthStuff")]
     public bool isInvincible = false;
-    public float helth = 250.0f;
+    public int helthMax = 1000;
+    public int helthCurrent;
+    public HealthBar healthBar;
 
     [Header("TimerStuff")]
     public float timerTimer = 5; // initial attack cooldown
@@ -30,17 +32,28 @@ public class Boss : MonoBehaviour
     public bool canTeleport; // ability to teleport
 
     Rigidbody2D rigidbody2d; //rigidbody
+
+    GameObject player;
+    public 
+    
     // Start is called before the first frame update
     void Start()
     {
         rigidbody2d = GetComponent<Rigidbody2D>(); // makes rigidbody work
+
+        player = GameObject.Find("Player");
+
+
+        //sets health bar and health
+        helthCurrent = helthMax;
+        healthBar.SetMaxHealth(helthMax);
     }
 
     // Update is called once per frame
     void Update()
     {
         //attack timer. Going to randomly select an attack from array
-        if (timerTimer <= 0f)
+        /*if (timerTimer <= 0f)
         {
             //Randomly Selects 1 attack from the attack list
             randomattak = Random.Range(0, attacks.Length);
@@ -71,13 +84,23 @@ public class Boss : MonoBehaviour
         if (teleportTime > 0)
         {
             teleportTime -= Time.deltaTime;
-        }
+        }*/
+
+
     }
 
     //When the boss gets hit by something do this
     private void OnCollisionEnter2D(Collision2D other)
     {
         Debug.Log("Boss Got Hit" + other.otherCollider);
+        TakeDamage(player.GetComponent<Player>().damage); // grabs dmg from player
+    }
+
+    //boss takes damage, updates health bar
+    void TakeDamage(int dmg)
+    {
+        helthCurrent -= dmg;
+        healthBar.SetHealth(helthCurrent);
     }
 
     // Currently setup to launch a im assuming fireball

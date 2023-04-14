@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
     //health
     public int maxHealth = 100;
     public int curHealth;
-    int damage = 20;
+    public int damage = 20;
 
 
     // Start is called before the first frame update
@@ -61,7 +61,12 @@ public class Enemy : MonoBehaviour
     {
         if (other.gameObject.CompareTag("PlayerProjectile"))
         {
-            curHealth -= damage;
+            TakeDamage(player.GetComponent<Player>().damage); 
         }               
+    }
+
+    void TakeDamage(int dmg)
+    {
+        curHealth -= dmg;
     }
 }
