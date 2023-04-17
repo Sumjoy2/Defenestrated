@@ -25,7 +25,7 @@ public class Spawner : MonoBehaviour
 
         for(int i = 0; i < enemyCount; i++)
         {
-            GameObject enemyClone = Instantiate(enemy);
+            GameObject enemyClone = Instantiate(enemy, transform.position, Quaternion.identity);
             yield return new WaitForSeconds(spawnRate);
         }
 

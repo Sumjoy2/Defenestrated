@@ -11,10 +11,18 @@ public class Gun : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
-        {
-            Fire();
-        }          
+        //if (Input.GetButtonDown("Fire1"))
+        //{
+            //Fire();
+            if (Input.GetButtonDown("Fire1"))
+            {
+                Fire();
+            }
+            if (Input.GetButtonUp("Fire1"))
+            {
+                StopFire();
+            }
+        //}          
     }
 
     public bool Fire()
@@ -22,6 +30,13 @@ public class Gun : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
         return true;
+    }
+
+    public bool StopFire()
+    {
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
+        return false;
     }
 
 }

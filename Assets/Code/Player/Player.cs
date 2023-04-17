@@ -6,6 +6,8 @@ using TMPro;
 
 public class Player : MonoBehaviour
 {
+    public static Player Instance;
+    
     float horizontal;
     float vertical;
 
@@ -35,6 +37,16 @@ public class Player : MonoBehaviour
         rigidbody2d = GetComponent<Rigidbody2D>();
         curHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+
+        if(Instance != null)
+        {
+            Destroy(this.gameObject);
+            return;
+        }else if(Instance == null)
+        {
+            Instance = this;
+            GameObject.DontDestroyOnLoad(this.gameObject);
+        }
     }
 
     // Update is called once per frame

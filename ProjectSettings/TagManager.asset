@@ -9,6 +9,7 @@ TagManager:
   - PlayerProjectile
   - EnemyProjectile
   - Enemy
+  - Bullet
   layers:
   - Default
   - TransparentFX

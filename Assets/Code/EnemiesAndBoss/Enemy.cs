@@ -59,7 +59,7 @@ public class Enemy : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("PlayerProjectile"))
+        if (other.gameObject.CompareTag("PlayerProjectile") || other.gameObject.CompareTag("Bullet"))
         {
             TakeDamage(player.GetComponent<Player>().damage); 
         }               
