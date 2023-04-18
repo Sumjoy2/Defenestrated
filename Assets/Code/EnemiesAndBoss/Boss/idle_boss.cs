@@ -11,13 +11,15 @@ public class idle_boss : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
        boss = animator.GetComponent<Boss>();
-       
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.SetTrigger("Attak");
+        if (boss.GetComponent<Boss>().timerTimer <= 0)
+        {
+            animator.SetTrigger("Attak");
+        }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

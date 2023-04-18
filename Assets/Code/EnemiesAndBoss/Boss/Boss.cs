@@ -53,17 +53,17 @@ public class Boss : MonoBehaviour
     void Update()
     {
         //attack timer. Going to randomly select an attack from array
-        /*if (timerTimer <= 0f)
+        if (timerTimer <= 0f)
         {
             //Randomly Selects 1 attack from the attack list
             randomattak = Random.Range(0, attacks.Length);
-            //fireball
+            /*//fireball
             if (randomattak == 0)
             {
                 LaunchFireBall();
             }
             //suommon enemy
-            else if (randomattak == 1) 
+            else if (randomattak == 1)
             {
                 SummonEnemies();
             }
@@ -72,7 +72,8 @@ public class Boss : MonoBehaviour
             {
                 Teleport();
                 Debug.Log("Teleported");
-            }
+            }*/
+
             timerTimer = timeTime;
         }
         //timer countdown
@@ -84,9 +85,7 @@ public class Boss : MonoBehaviour
         if (teleportTime > 0)
         {
             teleportTime -= Time.deltaTime;
-        }*/
-
-
+        }
     }
 
     //When the boss gets hit by something do this
