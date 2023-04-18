@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: -7869887167177039591}
   m_Layer: 0
   m_Name: Gun
-  m_TagString: EnemyProjectile
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -179,6 +179,7 @@ MonoBehaviour:
   firePoint: {fileID: 3661691033874357784}
   bulletPrefab: {fileID: 8550436578927525201, guid: 830419ddfd404b243a2cff8e5ea996b4, type: 3}
   bulletForce: 10
+  gun: {fileID: 3661691034411511470}
 --- !u!114 &-7869887167177039591
 MonoBehaviour:
   m_ObjectHideFlags: 0
