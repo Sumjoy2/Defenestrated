@@ -3996,7 +3996,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1424541359}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -7869887167177039591, guid: 905891bc16c5ed84ba4caf5c6f410619, type: 3}
       propertyPath: m_Enabled
@@ -4004,15 +4004,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3661691034411511469, guid: 905891bc16c5ed84ba4caf5c6f410619, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3661691034411511469, guid: 905891bc16c5ed84ba4caf5c6f410619, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.39
+      value: -5.98
       objectReference: {fileID: 0}
     - target: {fileID: 3661691034411511469, guid: 905891bc16c5ed84ba4caf5c6f410619, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.46
+      value: -0.71
       objectReference: {fileID: 0}
     - target: {fileID: 3661691034411511469, guid: 905891bc16c5ed84ba4caf5c6f410619, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4050,8 +4050,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gun
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: -7869887167177039591, guid: 905891bc16c5ed84ba4caf5c6f410619, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 905891bc16c5ed84ba4caf5c6f410619, type: 3}
 --- !u!1001 &6650056045588094223
 PrefabInstance:
