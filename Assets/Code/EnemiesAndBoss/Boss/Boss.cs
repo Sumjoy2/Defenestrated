@@ -34,7 +34,6 @@ public class Boss : MonoBehaviour
     Rigidbody2D rigidbody2d; //rigidbody
 
     GameObject player;
-    public 
     
     // Start is called before the first frame update
     void Start()
@@ -51,7 +50,7 @@ public class Boss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.rotation = Quaternion.LookRotation(Vector3.back, player.transform.position);
+        transform.rotation = Quaternion.LookRotation(Vector3.forward, player.transform.position);
         //attack timer. Going to randomly select an attack from array
         if (timerTimer <= 0f)
         {
