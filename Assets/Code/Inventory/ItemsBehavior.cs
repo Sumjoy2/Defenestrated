@@ -57,6 +57,7 @@ public class ItemsBehavior : MonoBehaviour
         GameObject go = Instantiate(gun, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
         //GameObject go = Instantiate(gun, transform.position, Quaternion.identity);
         go.transform.parent = GameObject.Find("Player").transform;
+        //reset its position again
         Destroy(gameObject);
     }
 }
