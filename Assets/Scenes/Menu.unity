@@ -2531,7 +2531,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Max: Designer/Sound\nDJ: Art/Sound\nRahma: code\nSage: code\n                                 "
+  m_Text: "Max Octaviano-Francisco: Designer/Sound\nDJ Mahasongkham: Concept Art/Sound\nRahma
+    Nurhussen: code\nSage Mountjoy: code\n                                 "
 --- !u!222 &1893199092
 CanvasRenderer:
   m_ObjectHideFlags: 0

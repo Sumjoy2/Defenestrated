@@ -21,11 +21,16 @@ public class ataal : StateMachineBehaviour
         {
             animator.SetTrigger("FireBall");
         }
+        else if (script.randomattak == 3)
+        {
+            animator.SetTrigger("Laser");
+        }
     }
-
+    
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.ResetTrigger("FireBall");
+        animator.ResetTrigger("Laser");
     }
 }

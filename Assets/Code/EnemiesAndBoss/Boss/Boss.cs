@@ -43,7 +43,6 @@ public class Boss : MonoBehaviour
 
         player = GameObject.Find("Player");
 
-
         //sets health bar and health
         helthCurrent = helthMax;
         healthBar.SetMaxHealth(helthMax);
@@ -52,11 +51,15 @@ public class Boss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        transform.rotation = Quaternion.LookRotation(Vector3.back, player.transform.position);
         //attack timer. Going to randomly select an attack from array
         if (timerTimer <= 0f)
         {
             //Randomly Selects 1 attack from the attack list
             randomattak = Random.Range(0, attacks.Length);
+
+            //Targets Player
+            
             /*//fireball
             if (randomattak == 0)
             {
@@ -71,7 +74,6 @@ public class Boss : MonoBehaviour
             else if (canTeleport == true && randomattak == 2 && teleportTime <= 0)
             {
                 Teleport();
-                Debug.Log("Teleported");
             }*/
 
             timerTimer = timeTime;
@@ -98,6 +100,10 @@ public class Boss : MonoBehaviour
     //boss takes damage, updates health bar
     void TakeDamage(int dmg)
     {
+        if (isInvincible)
+        {
+            return;
+        }
         helthCurrent -= dmg;
         healthBar.SetHealth(helthCurrent);
     }
@@ -127,10 +133,10 @@ public class Boss : MonoBehaviour
     }
 
     //launch laser, smaller does more damage
-    void laser()
+    void Laser()
     {
-        GameObject fireball = Instantiate(attacks[3], transform.position, transform.rotation); //summons from boss local
-        fireball.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector3(300, Random.Range(-range, range), 0)); // makes go zoom
+        GameObject laser = Instantiate(attacks[3], transform.position, transform.rotation); //summons from boss local
+        laser.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector3(500, Random.Range(-range, range), 0)); // makes go zoom
         Debug.Log("LaserSent");
     }
 }
