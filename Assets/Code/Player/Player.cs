@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     float horizontal;
     float vertical;
 
-    public Gun gun;
+    private GameObject playerWithGun;
 
     //HP stuff
     public int maxHealth = 100;
@@ -48,6 +48,8 @@ public class Player : MonoBehaviour
             Instance = this;
             GameObject.DontDestroyOnLoad(this.gameObject);
         }
+
+        playerWithGun = transform.FindChild("GunForPlayer");
 
         //saves player inventory/HUD elements 
     }

@@ -4,18 +4,27 @@ using System.Collections.Specialized;
 using System.Security.Cryptography;
 using System.Security.Permissions;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ItemsBehavior : MonoBehaviour
 {
     private Player player;
+
+    public KeyCode key;
+    private Button button;
     
     public GameObject granade;
-    public GameObject gun;
+    public GameObject playerWithGun;
     public GameObject bullet;
 
     private Vector2 targetPos;
     public float speed = 5;
 
+    
+    void Awake()
+    {
+        button = GetComponent<Button>();
+    }
     
     // Start is called before the first frame update
     void Start()
@@ -27,6 +36,11 @@ public class ItemsBehavior : MonoBehaviour
     void Update()
     {
         targetPos = GameObject.Find("Player").transform.position;
+
+        if (Input.GetKeyDown(key))
+        {
+            button.onClick.Invoke();
+        }
     }
 
     //heals player when heal is used in inventory
@@ -54,10 +68,11 @@ public class ItemsBehavior : MonoBehaviour
     public void UseGun()
     {
         //make it spawn in world/locat coordinate, test to see if it changes where the gun spawns
-        GameObject go = Instantiate(gun, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+        GameObject go = Instantiate(playerWithGun, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
         //GameObject go = Instantiate(gun, transform.position, Quaternion.identity);
-        go.transform.parent = GameObject.Find("Player").transform;
+        //go.transform.parent = GameObject.Find("Player").transform;
         //reset its position again
         Destroy(gameObject);
+        Destroy(GameObject.FindWithTag("Player"));
     }
 }

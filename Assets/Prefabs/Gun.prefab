@@ -42,7 +42,6 @@ GameObject:
   - component: {fileID: 3661691034411511468}
   - component: {fileID: 1390124312116866428}
   - component: {fileID: 3661691034411511471}
-  - component: {fileID: 3661691034411511474}
   - component: {fileID: -7869887167177039591}
   m_Layer: 0
   m_Name: Gun
@@ -59,8 +58,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3661691034411511470}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalPosition: {x: 0.2462, y: 0.2462, z: 0}
+  m_LocalScale: {x: 1.1588323, y: 1.1588323, z: 3.8627741}
   m_Children:
   - {fileID: 3661691033874357784}
   m_Father: {fileID: 0}
@@ -106,12 +105,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: bd3cb4af8406d4436a2ae8c2aafe1f8d, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 32320a017a557e645a91a35eaff0b0cd, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 1.28, y: 1.28}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -130,18 +129,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.009254046, y: -0.032389045}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 2}
-    newSize: {x: 1, y: 2}
+    oldSize: {x: 1.28, y: 1.28}
+    newSize: {x: 1.28, y: 1.28}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 0.4725209, y: 0.7414535}
   m_EdgeRadius: 0
 --- !u!50 &3661691034411511471
 Rigidbody2D:
@@ -164,22 +163,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3661691034411511474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3661691034411511470}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e0a408c43726fe47851b8499c0e361c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firePoint: {fileID: 3661691033874357784}
-  bulletPrefab: {fileID: 8550436578927525201, guid: 830419ddfd404b243a2cff8e5ea996b4, type: 3}
-  bulletForce: 10
-  gun: {fileID: 3661691034411511470}
 --- !u!114 &-7869887167177039591
 MonoBehaviour:
   m_ObjectHideFlags: 0
