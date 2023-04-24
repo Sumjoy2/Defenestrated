@@ -50,7 +50,9 @@ public class Boss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.rotation = Quaternion.LookRotation(Vector3.forward, player.transform.position);
+        Vector3 dir = player.transform.position - transform.position;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle + 90, Vector3.forward);
         //attack timer. Going to randomly select an attack from array
         if (timerTimer <= 0f)
         {
@@ -110,8 +112,8 @@ public class Boss : MonoBehaviour
     // Currently setup to launch a im assuming fireball
     void LaunchFireBall()
     {
-        GameObject fireball = Instantiate(attacks[0], transform.position, transform.rotation); //summons from boss local
-        fireball.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector3(300, Random.Range(-range, range), 0)); // makes go zoom
+        GameObject fireball = Instantiate(attacks[0], transform.position, transform.rotation);//summons from boss local
+        fireball.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector3 (Random.Range(-range, range), -300, 0)); // makes go zoom
         Debug.Log("FireBallSent");
     }
     
@@ -135,7 +137,7 @@ public class Boss : MonoBehaviour
     void Laser()
     {
         GameObject laser = Instantiate(attacks[3], transform.position, transform.rotation); //summons from boss local
-        laser.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector3(500, Random.Range(-range, range), 0)); // makes go zoom
+        laser.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector3(Random.Range(-range, range), -300, 0)); // makes go zoom
         Debug.Log("LaserSent");
     }
 }
