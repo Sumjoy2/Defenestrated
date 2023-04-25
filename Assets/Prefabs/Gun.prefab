@@ -41,7 +41,6 @@ GameObject:
   - component: {fileID: 3661691034411511469}
   - component: {fileID: 3661691034411511468}
   - component: {fileID: 1390124312116866428}
-  - component: {fileID: 3661691034411511471}
   - component: {fileID: -7869887167177039591}
   m_Layer: 0
   m_Name: Gun
@@ -142,27 +141,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4725209, y: 0.7414535}
   m_EdgeRadius: 0
---- !u!50 &3661691034411511471
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3661691034411511470}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 5000
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!114 &-7869887167177039591
 MonoBehaviour:
   m_ObjectHideFlags: 0

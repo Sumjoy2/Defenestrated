@@ -17,7 +17,8 @@ public class ItemsBehavior : MonoBehaviour
     public GameObject playerWithGun;
     public GameObject bullet;
 
-    private Vector2 targetPos;
+    private Vector3 targetPos;
+    private GameObject playerObj;
     public float speed = 5;
 
     
@@ -30,12 +31,15 @@ public class ItemsBehavior : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        //targetPos = GameObject.Find("Player").transform.position;
+        playerObj = GameObject.Find("Player");
+        targetPos = playerObj.transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        targetPos = GameObject.Find("Player").transform.position;
+        
 
         if (Input.GetKeyDown(key))
         {
@@ -67,12 +71,13 @@ public class ItemsBehavior : MonoBehaviour
 
     public void UseGun()
     {
+        Destroy(GameObject.FindWithTag("Player"));
         //make it spawn in world/locat coordinate, test to see if it changes where the gun spawns
-        GameObject go = Instantiate(playerWithGun, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+        playerWithGun = Instantiate(playerWithGun, playerObj.transform.position, Quaternion.identity);
         //GameObject go = Instantiate(gun, transform.position, Quaternion.identity);
         //go.transform.parent = GameObject.Find("Player").transform;
         //reset its position again
         Destroy(gameObject);
-        Destroy(GameObject.FindWithTag("Player"));
+        
     }
 }
