@@ -49,7 +49,7 @@ public class Player : MonoBehaviour
             GameObject.DontDestroyOnLoad(this.gameObject);
         }
 
-        playerWithGun = transform.FindChild("GunForPlayer");
+        //playerWithGun = transform.FindChild("GunForPlayer");
 
         //saves player inventory/HUD elements 
     }
