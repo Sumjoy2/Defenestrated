@@ -34,6 +34,8 @@ public class Boss : MonoBehaviour
     Rigidbody2D rigidbody2d; //rigidbody
 
     GameObject player;
+    [Header("Win")]
+    public GameObject Win;
     
     // Start is called before the first frame update
     void Start()
@@ -89,6 +91,12 @@ public class Boss : MonoBehaviour
         {
             teleportTime -= Time.deltaTime;
         }
+        if (helthCurrent <= 0)
+        {
+            //load scene win
+            PauseGame();
+            Win.SetActive(true);
+        }
     }
 
     //When the boss gets hit by something do this
@@ -139,5 +147,10 @@ public class Boss : MonoBehaviour
         GameObject laser = Instantiate(attacks[3], transform.position, transform.rotation); //summons from boss local
         laser.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector3(Random.Range(-range, range), -300, 0)); // makes go zoom
         Debug.Log("LaserSent");
+    }
+
+    void PauseGame()
+    {
+        Time.timeScale = 0;
     }
 }
