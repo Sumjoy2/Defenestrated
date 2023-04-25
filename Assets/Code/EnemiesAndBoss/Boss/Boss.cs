@@ -22,8 +22,7 @@ public class Boss : MonoBehaviour
     /* important attack array info
      * 0 = projectile
      * 1 = enemy
-     * 2 = teleport
-     * 3 = laserr
+     * 2 = laserr
      */
 
     [Header("TeleportStuff")]
@@ -35,7 +34,7 @@ public class Boss : MonoBehaviour
 
     GameObject player;
     [Header("Win")]
-    public GameObject Win;
+    public GameObject Win; //allows win
     
     // Start is called before the first frame update
     void Start()
@@ -141,11 +140,11 @@ public class Boss : MonoBehaviour
         teleportTime = cooldownTeleport;
     }
 
-    //launch laser, smaller does more damage
+    //launch laser, smaller, faster, does more damage
     void Laser()
     {
-        GameObject laser = Instantiate(attacks[3], transform.position, transform.rotation); //summons from boss local
-        laser.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector3(Random.Range(-range, range), -300, 0)); // makes go zoom
+        GameObject laser = Instantiate(attacks[2], transform.position, transform.rotation); //summons from boss local
+        laser.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector3(Random.Range(-range, range), -450, 0)); // makes go zoom
         Debug.Log("LaserSent");
     }
 

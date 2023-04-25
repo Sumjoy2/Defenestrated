@@ -2700,7 +2700,6 @@ MonoBehaviour:
   attacks:
   - {fileID: 5800578675605025380, guid: f3464f24fb075654a8d0709eb9a84c9e, type: 3}
   - {fileID: 2076281822836214175, guid: cf454dec5c4beff4c9a97aebc617786f, type: 3}
-  - {fileID: 0}
   - {fileID: 2510200521962896726, guid: 3bb6ed31d496bec4989457e21c9e0544, type: 3}
   randomattak: 0
   range: 75

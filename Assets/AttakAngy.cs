@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ataal : StateMachineBehaviour
+public class AttakAngy : StateMachineBehaviour
 {
     Boss boss;
     Boss script;
@@ -17,25 +17,15 @@ public class ataal : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (script.randomattak == 0)
+        if (script.randomattak == 1)
         {
-            animator.SetTrigger("FireBall");
-        }
-        else if (script.randomattak == 2)
-        {
-            animator.SetTrigger("Laser");
-        }
-
-        if (script.helthCurrent <= script.helthMax /2)
-        {
-            animator.SetBool("Angy", true);
+            animator.SetTrigger("SummonEnemies");
         }
     }
-    
+
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.ResetTrigger("FireBall");
-        animator.ResetTrigger("Laser");
+        animator.ResetTrigger("SummonEnemies");
     }
 }
