@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     //current player health
     public int curHealth;
     public int damage = 20;
-    public HealthBar healthBar;
+    private HealthBar healthBar;
 
     public float expirence = 0;
     public float speed = 3.5f;
@@ -34,6 +34,8 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        healthBar = GameObject.FindGameObjectWithTag("Player").GetComponent<HealthBar>();
+        
         rigidbody2d = GetComponent<Rigidbody2D>();
         curHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
