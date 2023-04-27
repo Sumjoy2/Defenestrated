@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 867093694730347469}
   - component: {fileID: -7992115068554336427}
   - component: {fileID: 1403176612}
-  - component: {fileID: 9015931929717121748}
   m_Layer: 0
   m_Name: Heals
   m_TagString: Untagged
@@ -102,19 +101,6 @@ CircleCollider2D:
   serializedVersion: 2
   m_Radius: 0.56260026
 --- !u!114 &1403176612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 867093694730347471}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51c1c02403e07da4db05613b521599e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemButton: {fileID: 8083800518878387861, guid: 860af8431469f64448f950fd1c930329, type: 3}
---- !u!114 &9015931929717121748
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
