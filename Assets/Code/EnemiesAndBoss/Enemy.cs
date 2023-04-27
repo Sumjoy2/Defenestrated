@@ -5,6 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     GameObject player;
+    private Player scip;
     GameObject bullet;
     public float speed = 2f;
     private Rigidbody2D rb;
@@ -22,6 +23,7 @@ public class Enemy : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         player = GameObject.Find("Player");
+        scip = player.GetComponent<Player>()
 
         curHealth = maxHealth;
     }
@@ -61,7 +63,7 @@ public class Enemy : MonoBehaviour
     {
         if (other.gameObject.CompareTag("PlayerProjectile") || other.gameObject.CompareTag("Bullet"))
         {
-            TakeDamage(player.GetComponent<Player>().damage); 
+            TakeDamage(player.GetComponent<Player>().damage);
         }               
     }
 

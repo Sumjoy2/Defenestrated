@@ -10,6 +10,7 @@ TagManager:
   - EnemyProjectile
   - Enemy
   - Bullet
+  - HealthBar
   layers:
   - Default
   - TransparentFX

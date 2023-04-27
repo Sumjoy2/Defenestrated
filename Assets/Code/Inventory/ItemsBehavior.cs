@@ -51,7 +51,7 @@ public class ItemsBehavior : MonoBehaviour
     public void UseHealth()
     {
         player.curHealth += 20;
-       // player.healthBar.SetHealth(player.curHealth);
+        player.healthBar.SetHealth(player.curHealth);
         Destroy(gameObject);
     }
 

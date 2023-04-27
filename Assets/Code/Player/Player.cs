@@ -34,6 +34,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        healthBar = GameObject.FindGameObjectWithTag("HealthBar").GetComponent<HealthBar>();
         rigidbody2d = GetComponent<Rigidbody2D>();
         curHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
@@ -89,7 +90,7 @@ public class Player : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("EnemyProjectile") || other.gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("BossProt") || other.gameObject.CompareTag("Enemy"))
         {
             curHealth -= damage;
             healthBar.SetHealth(curHealth);
