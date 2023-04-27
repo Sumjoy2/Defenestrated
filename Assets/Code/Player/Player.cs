@@ -92,7 +92,14 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.CompareTag("BossProt") || other.gameObject.CompareTag("Enemy"))
         {
-            curHealth -= damage;
+             if (other.gameObject.tag == "BossProt")
+             {
+                 TakeDamage(other.gameObject.GetComponent<bossProjectile>().damage);
+             }
+             else 
+             {
+                 TakeDamage(other.gameObject.GetComponent<Enemy>().damage);
+             }
             healthBar.SetHealth(curHealth);
             if (curHealth <= 0)
             {
@@ -110,6 +117,11 @@ public class Player : MonoBehaviour
             }
         }
               
+    }
+
+    void TakeDamage(int dmg)
+    {
+        curHealth -= dmg;
     }
 
     // https://gamedevbeginner.com/the-right-way-to-pause-the-game-in-unity/

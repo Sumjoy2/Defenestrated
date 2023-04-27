@@ -5,6 +5,7 @@ using UnityEngine;
 public class bossProjectile : MonoBehaviour
 {
     Rigidbody2D rigidbody2d;
+    public int damage = 20;
 
     // Start is called before the first frame update
     void Awake()
