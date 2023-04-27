@@ -26,7 +26,7 @@ public class ataal : StateMachineBehaviour
             animator.SetTrigger("Laser");
         }
 
-        if (script.helthCurrent <= script.helthMax /2)
+        if (script.helthCurrent <= script.helthMax / 2)
         {
             animator.SetBool("Angy", true);
         }

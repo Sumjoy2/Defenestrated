@@ -28,18 +28,22 @@ public class Boss : MonoBehaviour
     [Header("TeleportStuff")]
     public float cooldownTeleport = 10.0f; // How often boss teleports
     public float teleportTime; //Teleportation timer
-    public bool canTeleport; // ability to teleport
+    //public bool canTeleport; // ability to teleport
 
-    Rigidbody2D rigidbody2d; //rigidbody
-
-    GameObject player;
     [Header("Win")]
     public GameObject Win; //allows win
+
+    Rigidbody2D rigidbody2d; //rigidbody
+    Animator animator;
+
+    GameObject player;
+    
     
     // Start is called before the first frame update
     void Start()
     {
         rigidbody2d = GetComponent<Rigidbody2D>(); // makes rigidbody work
+        animator = GetComponent<Animator>();
 
         player = GameObject.Find("Player");
 
@@ -137,7 +141,6 @@ public class Boss : MonoBehaviour
     {
         rigidbody2d.position = Random.insideUnitCircle * 5;
         Debug.Log("Teleported");
-        teleportTime = cooldownTeleport;
     }
 
     //launch laser, smaller, faster, does more damage
