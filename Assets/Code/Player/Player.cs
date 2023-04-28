@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
 
     float generalTimer;
     float invincibleTimer;
+    bool isInvincible = false;
 
     Rigidbody2D rigidbody2d;
 
@@ -100,7 +101,7 @@ public class Player : MonoBehaviour
              {
                  TakeDamage(other.gameObject.GetComponent<Enemy>().damage);
              }
-            healthBar.SetHealth(curHealth);
+
             if (curHealth <= 0)
             {
                 PauseGame();
@@ -121,7 +122,12 @@ public class Player : MonoBehaviour
 
     void TakeDamage(int dmg)
     {
+        if (isInvincible)
+        {
+            return;
+        }
         curHealth -= dmg;
+        healthBar.SetHealth(curHealth);
     }
 
     // https://gamedevbeginner.com/the-right-way-to-pause-the-game-in-unity/
