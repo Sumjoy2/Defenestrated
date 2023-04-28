@@ -22,7 +22,7 @@ public class Enemy : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
 
-        player = GameObject.Find("Player");
+        player = GameObject.FindGameObjectWithTag("Player");
         playerScip = player.GetComponent<Player>();
 
         curHealth = maxHealth;
@@ -38,7 +38,11 @@ public class Enemy : MonoBehaviour
         //direction.Normalize();
         //movement = direction;
 
-        moveCharacter();
+        if(player!= null)
+        {
+            moveCharacter();
+        }
+
 
         if (curHealth <= 0)
         {

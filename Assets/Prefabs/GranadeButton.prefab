@@ -159,7 +159,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e501e1fb7e58c8f49950a792122108dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  key: 0
   granade: {fileID: 2187544520465602695, guid: 2799f5de7913d28419fc8b706f23f7cf, type: 3}
-  gun: {fileID: 3661691034411511470, guid: 905891bc16c5ed84ba4caf5c6f410619, type: 3}
+  playerWithGun: {fileID: 3510883147733315939, guid: fcdc2de1e42099c41bef2f38a1d3a2f3, type: 3}
   bullet: {fileID: 8550436578927525201, guid: 830419ddfd404b243a2cff8e5ea996b4, type: 3}
   speed: 5
