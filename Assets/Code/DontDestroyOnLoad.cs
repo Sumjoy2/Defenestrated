@@ -7,24 +7,23 @@ public class DontDestroyOnLoad : MonoBehaviour
     /*    public static Player Instance;*/
     public static GameObject test;
     // Start is called before the first frame update
-   /* void Start()
+    void Start()
     {
-
-        if (test != null)
+        test = this.gameObject;
+        if (test == null)
         {
             Destroy(this.gameObject);
             return;
         }
-        else if (test == null)
+        else if (test != null)
         {
-            test = this;
             GameObject.DontDestroyOnLoad(this.gameObject);
         }
     }
 
-    // Update is called once per frame
+    // Update is called once per frameS
     void Update()
     {
 
-    }*/
+    }
 }
