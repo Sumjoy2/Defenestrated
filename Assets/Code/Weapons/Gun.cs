@@ -12,18 +12,15 @@ public class Gun : MonoBehaviour
 
     void Update()
     {
-        //if (Input.GetButtonDown("Fire1"))
-        //{
-            //Fire();
-            if (Input.GetButtonDown("Fire1"))
-            {
-                Fire();
-            }
-            if (Input.GetButtonUp("Fire1"))
-            {
-                StopFire();
-            }
-        //}          
+            //Fires da gun
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Fire();
+        }
+        if (Input.GetButtonUp("Fire1"))
+        {
+            StopFire();
+        }
     }
 
     public bool Fire()

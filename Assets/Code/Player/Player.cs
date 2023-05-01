@@ -81,8 +81,10 @@ public class Player : MonoBehaviour
         rigidbody2d.MovePosition(position);
 
         Vector2 aimDirection = mousePosition - rigidbody2d.position;
-        float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
-        rigidbody2d.rotation = aimAngle;
+        //the fancy math stuff that makes gun face correct direction
+        float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg -90f;
+        //I dont understand why this works but when i put the quaternion into your equation it didnt - Sage
+        transform.rotation = Quaternion.AngleAxis(angle + 90, Vector3.forward);
     }
 
     private void LoadScene(string sceneName)
