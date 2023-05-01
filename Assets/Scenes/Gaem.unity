@@ -671,6 +671,22 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 545419832}
+    - target: {fileID: 7964153488444913016, guid: fcdc2de1e42099c41bef2f38a1d3a2f3, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9146638359060817232, guid: fcdc2de1e42099c41bef2f38a1d3a2f3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 9146638359060817232, guid: fcdc2de1e42099c41bef2f38a1d3a2f3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 9146638359060817232, guid: fcdc2de1e42099c41bef2f38a1d3a2f3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcdc2de1e42099c41bef2f38a1d3a2f3, type: 3}
 --- !u!1001 &388595875
