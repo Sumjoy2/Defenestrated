@@ -7,6 +7,7 @@ using TMPro;
 public class Player : MonoBehaviour
 {
     public static Player Instance;
+    //public PauseMenu pause;
 
     float horizontal;
     float vertical;
@@ -39,6 +40,8 @@ public class Player : MonoBehaviour
         rigidbody2d = GetComponent<Rigidbody2D>();
         curHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+
+        
 
         if (Instance != null)
         {
