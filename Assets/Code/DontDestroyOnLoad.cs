@@ -9,14 +9,14 @@ public class DontDestroyOnLoad : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        test = this.gameObject;
-        if (test == null)
+        if (test != null)
         {
             Destroy(this.gameObject);
             return;
         }
-        else if (test != null)
+        else if (test == null)
         {
+            test = this.gameObject;
             GameObject.DontDestroyOnLoad(this.gameObject);
         }
     }
