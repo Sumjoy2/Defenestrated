@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     public int curHealth;
     public int damage = 20;
     public HealthBar healthBar;
+    public bool Save;
 
     public float expirence = 0;
     public float speed = 3.5f;
@@ -45,7 +46,7 @@ public class Player : MonoBehaviour
             Destroy(this.gameObject);
             return;
         }
-        else if (Instance == null)
+        else if (Instance == null && Save == true)
         {
             Instance = this;
             GameObject.DontDestroyOnLoad(this.gameObject);
@@ -69,6 +70,7 @@ public class Player : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
+
         
     }
 
