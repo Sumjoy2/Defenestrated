@@ -14,4 +14,8 @@ public class MenuButtons : MonoBehaviour
     {
         Application.Quit();
     }
+    public void ResumeGame()
+    {
+        Time.timeScale = 1;
+    }
 }

@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
 
     float generalTimer;
     float invincibleTimer;
+    bool isInvincible = false;
 
     Rigidbody2D rigidbody2d;
 
@@ -68,6 +69,7 @@ public class Player : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
+        
     }
 
     void FixedUpdate()
@@ -79,8 +81,10 @@ public class Player : MonoBehaviour
         rigidbody2d.MovePosition(position);
 
         Vector2 aimDirection = mousePosition - rigidbody2d.position;
-        float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
-        rigidbody2d.rotation = aimAngle;
+        //the fancy math stuff that makes gun face correct direction
+        float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg -90f;
+        //I dont understand why this works but when i put the quaternion into your equation it didnt - Sage
+        transform.rotation = Quaternion.AngleAxis(angle + 90, Vector3.forward);
     }
 
     private void LoadScene(string sceneName)
@@ -100,7 +104,7 @@ public class Player : MonoBehaviour
              {
                  TakeDamage(other.gameObject.GetComponent<Enemy>().damage);
              }
-            healthBar.SetHealth(curHealth);
+
             if (curHealth <= 0)
             {
                 PauseGame();
@@ -121,7 +125,12 @@ public class Player : MonoBehaviour
 
     void TakeDamage(int dmg)
     {
+        if (isInvincible)
+        {
+            return;
+        }
         curHealth -= dmg;
+        healthBar.SetHealth(curHealth);
     }
 
     // https://gamedevbeginner.com/the-right-way-to-pause-the-game-in-unity/

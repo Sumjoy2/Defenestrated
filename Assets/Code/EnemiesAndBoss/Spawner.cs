@@ -13,6 +13,7 @@ public class Spawner : MonoBehaviour
 
     void Update()
     {
+        //if spawn reaches 4, then stop spawning so player can fight boss
         if(waveIsDone == true)
         {
             StartCoroutine(waveSpawner());
@@ -30,7 +31,7 @@ public class Spawner : MonoBehaviour
         }
 
         spawnRate -= 0.1f;
-        enemyCount += 5;
+        enemyCount += 3;
 
         yield return new WaitForSeconds(timeBetweenWaves);
 
