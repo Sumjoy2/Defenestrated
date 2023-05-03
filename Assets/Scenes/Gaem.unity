@@ -668,9 +668,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4954593276299215345, guid: fcdc2de1e42099c41bef2f38a1d3a2f3, type: 3}
+      propertyPath: Save
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4954593276299215345, guid: fcdc2de1e42099c41bef2f38a1d3a2f3, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 545419832}
+    - target: {fileID: 6467561760889491669, guid: fcdc2de1e42099c41bef2f38a1d3a2f3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7964153488444913016, guid: fcdc2de1e42099c41bef2f38a1d3a2f3, type: 3}
       propertyPath: m_BodyType
       value: 1
@@ -31084,6 +31092,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 867093694730347469, guid: 7a3bec6c65cd8c14c8bb940ab0c7f9be, type: 3}
+      propertyPath: m_SortingOrder
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 867093694730347471, guid: 7a3bec6c65cd8c14c8bb940ab0c7f9be, type: 3}
       propertyPath: m_Name
       value: Heals
@@ -31097,6 +31109,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 302945806495668218, guid: 2799f5de7913d28419fc8b706f23f7cf, type: 3}
+      propertyPath: m_SortingOrder
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 2187544520465602695, guid: 2799f5de7913d28419fc8b706f23f7cf, type: 3}
       propertyPath: m_Name
       value: Granade
