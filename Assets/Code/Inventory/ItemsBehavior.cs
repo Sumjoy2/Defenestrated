@@ -50,8 +50,7 @@ public class ItemsBehavior : MonoBehaviour
     //heals player when heal is used in inventory
     public void UseHealth()
     {
-        player.curHealth += 20;
-        player.healthBar.SetHealth(player.curHealth);
+        player.TakeDamage(-20);
         Destroy(gameObject);
     }
 

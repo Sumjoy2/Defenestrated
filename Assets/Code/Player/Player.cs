@@ -14,14 +14,17 @@ public class Player : MonoBehaviour
 
     private GameObject playerWithGun;
 
+    [Header("HelthStuffs")]
     //HP stuff
     public int maxHealth = 100;
     //current player health
     public int curHealth;
     public int damage = 20;
     public HealthBar healthBar;
-    public bool Save;
+    public TextMeshProUGUI healthPoints;
 
+    [Header("Other")]
+    public bool Save;
     public float expirence = 0;
     public float speed = 3.5f;
 
@@ -128,7 +131,7 @@ public class Player : MonoBehaviour
               
     }
 
-    void TakeDamage(int dmg)
+    public void TakeDamage(int dmg)
     {
         if (isInvincible)
         {
@@ -136,6 +139,7 @@ public class Player : MonoBehaviour
         }
         curHealth -= dmg;
         healthBar.SetHealth(curHealth);
+        healthPoints.text = curHealth.ToString();
     }
 
     // https://gamedevbeginner.com/the-right-way-to-pause-the-game-in-unity/
