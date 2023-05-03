@@ -723,6 +723,10 @@ PrefabInstance:
       propertyPath: slots.Array.data[4]
       value: 
       objectReference: {fileID: 1589278510}
+    - target: {fileID: 2985894152843376344, guid: fcdc2de1e42099c41bef2f38a1d3a2f3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3510883147733315939, guid: fcdc2de1e42099c41bef2f38a1d3a2f3, type: 3}
       propertyPath: m_Name
       value: Player
