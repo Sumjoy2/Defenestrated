@@ -58,8 +58,9 @@ public class ItemsBehavior : MonoBehaviour
     {
         Instantiate(granade, playerObj.transform.position, Quaternion.identity);
         speed -= Random.Range(.1f, .25f);
-        transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);      
-        Destroy(gameObject);
+        transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
+       
+        //Destroy(gameObject);
     }
 
     public void UseGun()
