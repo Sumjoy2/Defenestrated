@@ -16,7 +16,6 @@ public class Tutorial : MonoBehaviour
 
     public void damagePlayer()
     {
-        playerScrip.curHealth = playerScrip.curHealth - dmg;
-        playerScrip.healthBar.SetHealth(playerScrip.curHealth);
+        playerScrip.TakeDamage(dmg);
     }
 }
