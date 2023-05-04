@@ -723,10 +723,6 @@ PrefabInstance:
       propertyPath: slots.Array.data[4]
       value: 
       objectReference: {fileID: 1589278510}
-    - target: {fileID: 2985894152843376344, guid: fcdc2de1e42099c41bef2f38a1d3a2f3, type: 3}
-      propertyPath: m_SortingOrder
-      value: 11
-      objectReference: {fileID: 0}
     - target: {fileID: 3510883147733315939, guid: fcdc2de1e42099c41bef2f38a1d3a2f3, type: 3}
       propertyPath: m_Name
       value: Player
@@ -776,10 +772,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4954593276299215345, guid: fcdc2de1e42099c41bef2f38a1d3a2f3, type: 3}
-      propertyPath: Save
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4954593276299215345, guid: fcdc2de1e42099c41bef2f38a1d3a2f3, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 83090926}
@@ -787,26 +779,6 @@ PrefabInstance:
       propertyPath: healthPoints
       value: 
       objectReference: {fileID: 590313800}
-    - target: {fileID: 6467561760889491669, guid: fcdc2de1e42099c41bef2f38a1d3a2f3, type: 3}
-      propertyPath: m_SortingOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7964153488444913016, guid: fcdc2de1e42099c41bef2f38a1d3a2f3, type: 3}
-      propertyPath: m_BodyType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9146638359060817232, guid: fcdc2de1e42099c41bef2f38a1d3a2f3, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 9146638359060817232, guid: fcdc2de1e42099c41bef2f38a1d3a2f3, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 9146638359060817232, guid: fcdc2de1e42099c41bef2f38a1d3a2f3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -90
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcdc2de1e42099c41bef2f38a1d3a2f3, type: 3}
 --- !u!1001 &388595875

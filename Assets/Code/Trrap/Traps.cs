@@ -24,7 +24,7 @@ public class Traps : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene("Trap");
             player.position = targetPosition;
         }
     }
