@@ -795,6 +795,10 @@ PrefabInstance:
       propertyPath: m_BodyType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8020525639781237044, guid: fcdc2de1e42099c41bef2f38a1d3a2f3, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 9146638359060817232, guid: fcdc2de1e42099c41bef2f38a1d3a2f3, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.7071068
