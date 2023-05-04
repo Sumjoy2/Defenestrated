@@ -131,6 +131,7 @@ public class Player : MonoBehaviour
               
     }
 
+    //Does All Health Stuffs
     public void TakeDamage(int dmg)
     {
         if (isInvincible)
