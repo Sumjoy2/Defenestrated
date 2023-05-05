@@ -16,6 +16,8 @@ public class Enemy : MonoBehaviour
     public int curHealth;
     public int damage = 20;
 
+    private bool explosion;
+
 
     // Start is called before the first frame update
     void Start()
@@ -71,8 +73,14 @@ public class Enemy : MonoBehaviour
         }               
     }
 
-    void TakeDamage(int dmg)
+    public void TakeDamage(int dmg)
     {
         curHealth -= dmg;
+
+        if (!explosion)
+        {
+            explosion = true;
+            curHealth -= dmg;
+        }
     }
 }

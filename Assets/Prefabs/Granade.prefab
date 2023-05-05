@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 5946950365087620552}
   - component: {fileID: 302945806495668218}
   - component: {fileID: 8235864290798971507}
-  - component: {fileID: 8776150748536131551}
-  - component: {fileID: 687783612}
+  - component: {fileID: -5838589555732649271}
+  - component: {fileID: -9026978231783243031}
   m_Layer: 0
   m_Name: Granade
   m_TagString: Untagged
@@ -111,7 +111,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7150314, y: 0.92978483}
   m_EdgeRadius: 0
---- !u!114 &8776150748536131551
+--- !u!114 &-5838589555732649271
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -123,16 +123,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d586976d30c5a6445a6512fa41ff43e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &687783612
-MonoBehaviour:
+  speed: 5
+  explosion: {fileID: 1308563485096406616, guid: 382259e936978a9498d863ff49143a59, type: 3}
+--- !u!50 &-9026978231783243031
+Rigidbody2D:
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2187544520465602695}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51c1c02403e07da4db05613b521599e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemButton: {fileID: 6785515743142397807, guid: b7a6eaa240e788f4482a17ed5704bd70, type: 3}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
