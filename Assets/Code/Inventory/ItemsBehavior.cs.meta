@@ -3,7 +3,10 @@ guid: e501e1fb7e58c8f49950a792122108dd
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - granade: {fileID: 2187544520465602695, guid: 2799f5de7913d28419fc8b706f23f7cf, type: 3}
+  - playerWithGun: {instanceID: 0}
+  - bullet: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

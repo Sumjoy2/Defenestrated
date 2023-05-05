@@ -37,6 +37,8 @@ public class Player : MonoBehaviour
     Vector2 moveDirection;
     Vector2 mousePosition;
 
+    public GameObject granade;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -77,7 +79,10 @@ public class Player : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
-        
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Instantiate(granade, transform.position, Quaternion.identity);
+        }
     }
 
     void FixedUpdate()

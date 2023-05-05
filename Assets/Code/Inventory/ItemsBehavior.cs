@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -5,6 +6,7 @@ using System.Security.Cryptography;
 using System.Security.Permissions;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class ItemsBehavior : MonoBehaviour
 {
@@ -19,8 +21,7 @@ public class ItemsBehavior : MonoBehaviour
 
     private Vector3 targetPos;
     private GameObject playerObj;
-    public float speed = 5;
-
+        
     
     void Awake()
     {
@@ -41,12 +42,10 @@ public class ItemsBehavior : MonoBehaviour
     {
         
 
-        if (Input.GetKeyDown(key))
-        {
-            button.onClick.Invoke();
-        }
-    }
-
+        
+    }    
+    
+    
     //heals player when heal is used in inventory
     public void UseHealth()
     {
@@ -56,9 +55,10 @@ public class ItemsBehavior : MonoBehaviour
 
     public void UseGranade()
     {
-        Instantiate(granade, playerObj.transform.position, Quaternion.identity);
-        speed -= Random.Range(.1f, .25f);
-        transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
+        
+        
+        
+        
        
         //Destroy(gameObject);
     }

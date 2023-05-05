@@ -17,10 +17,7 @@ public class Gun : MonoBehaviour
         {
             Fire();
         }
-        if (Input.GetButtonUp("Fire1"))
-        {
-            StopFire();
-        }
+        
     }
 
     public bool Fire()
