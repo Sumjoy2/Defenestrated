@@ -78,9 +78,14 @@ public class Enemy : MonoBehaviour
         curHealth -= dmg;
 
         if (!explosion)
-        {
-            explosion = true;
-            curHealth -= dmg;
+        {          
+            curHealth -= 100;
         }
+    }
+
+    IEnumerator CoolDown()
+    {
+        yield return new WaitForSeconds(.2f);
+        explosion = false;
     }
 }
