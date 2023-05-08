@@ -51,7 +51,11 @@ public class Enemy : MonoBehaviour
         if (curHealth <= 0)
         {
             Destroy(gameObject);
-            Instantiate(healing, transform.position, Quaternion.identity);
+            int q = Random.Range(1, 100);
+            if (q > 25)
+            {
+                Instantiate(healing, transform.position, Quaternion.identity);
+            }
         }
     }
 
