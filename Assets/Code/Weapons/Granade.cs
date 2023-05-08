@@ -14,15 +14,15 @@ public class Granade : MonoBehaviour
 
     void Start()
     {
-        targetPos = GameObject.Find("FirePoint").transform.position;
+        targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
     
     void Update()
     {       
 
-        if (speed > 0)
+        if (speed >= 0)
         {
-            speed -= Random.Range(.001f, .0025f);
+            speed -= Random.Range(0.005f, 0.007f);
             transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
         }
         else if (speed < 0)
@@ -31,10 +31,8 @@ public class Granade : MonoBehaviour
             StartCoroutine(Explode(1));
         }
 
-
     }  
         
-    
     IEnumerator Explode(float time)
     {
         yield return new WaitForSeconds(time);

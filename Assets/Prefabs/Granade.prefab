@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 8235864290798971507}
   - component: {fileID: -5838589555732649271}
   - component: {fileID: -9026978231783243031}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Granade
-  m_TagString: Untagged
+  m_TagString: Grenade
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

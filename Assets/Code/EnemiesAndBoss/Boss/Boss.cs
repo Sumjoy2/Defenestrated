@@ -110,7 +110,7 @@ public class Boss : MonoBehaviour
     }
 
     //boss takes damage, updates health bar
-    void TakeDamage(int dmg)
+    public void TakeDamage(int dmg)
     {
         if (isInvincible)
         {

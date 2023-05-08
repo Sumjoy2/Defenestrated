@@ -1067,7 +1067,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Grenades Explode
+  m_text: 'Grenades Explode
+
+    Q to throw'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2774,7 +2776,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -7
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0.43867922, g: 0.96527904, b: 1, a: 0.60784316}
   m_FlipX: 0
@@ -3631,6 +3633,10 @@ PrefabInstance:
       propertyPath: Save
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4954593276299215345, guid: fcdc2de1e42099c41bef2f38a1d3a2f3, type: 3}
+      propertyPath: granade
+      value: 
+      objectReference: {fileID: 2187544520465602695, guid: 2799f5de7913d28419fc8b706f23f7cf, type: 3}
     - target: {fileID: 4954593276299215345, guid: fcdc2de1e42099c41bef2f38a1d3a2f3, type: 3}
       propertyPath: healthBar
       value: 

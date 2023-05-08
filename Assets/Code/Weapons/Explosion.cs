@@ -5,19 +5,21 @@ using UnityEngine;
 public class Explosion : MonoBehaviour
 {
     public float radius = 3;
-
+    public int dmg = 100;
     private GameObject Enemy;
+    private GameObject Boss;
 
     // Start is called before the first frame update
     void Start()
     {
         Enemy = GameObject.FindGameObjectWithTag("Enemy");
+        Boss = GameObject.FindGameObjectWithTag("Boss");
     }
 
     // Update is called once per frame
     void Update()
     {
-        Collider2D[] enemyHit = Physics2D.OverlapCircleAll(transform.position, radius);
+        /*Collider2D[] enemyHit = Physics2D.OverlapCircleAll(transform.position, radius);
 
         foreach (Collider2D col in enemyHit)
         {
@@ -26,6 +28,18 @@ public class Explosion : MonoBehaviour
             {
                 //Enemy.TakeDamage(100);
             }
+        }*/
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == ("Enemy"))
+        {
+            other.gameObject.GetComponent<Enemy>().TakeDamage(dmg);
+        }
+        else if (other.gameObject.tag == ("Boss"))
+        {
+            other.gameObject.GetComponent<Boss>().TakeDamage(dmg);
         }
     }
 }

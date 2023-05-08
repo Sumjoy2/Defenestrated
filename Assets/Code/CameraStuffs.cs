@@ -7,6 +7,7 @@ public class CameraStuffs : MonoBehaviour
 {
     public CinemachineVirtualCamera vcam;
     public GameObject player;
+
     // Start is called before the first frame update
     void Start()
     {
