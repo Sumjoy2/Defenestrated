@@ -148,3 +148,4 @@ MonoBehaviour:
   maxHealth: 100
   curHealth: 0
   damage: 20
+  healing: {fileID: 867093694730347471, guid: 7a3bec6c65cd8c14c8bb940ab0c7f9be, type: 3}

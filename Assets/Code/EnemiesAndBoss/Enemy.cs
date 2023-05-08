@@ -18,6 +18,8 @@ public class Enemy : MonoBehaviour
 
     private bool explosion;
 
+    public GameObject healing;
+
 
     // Start is called before the first frame update
     void Start()
@@ -49,6 +51,7 @@ public class Enemy : MonoBehaviour
         if (curHealth <= 0)
         {
             Destroy(gameObject);
+            Instantiate(healing, transform.position, Quaternion.identity);
         }
     }
 

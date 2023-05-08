@@ -8,6 +8,7 @@ public class Spawner : MonoBehaviour
     public float timeBetweenWaves = 5.0f;
 
     public int enemyCount;
+    public int waveCount = 0;
     public GameObject enemy;
     bool waveIsDone = true;
 
@@ -22,20 +23,26 @@ public class Spawner : MonoBehaviour
 
     IEnumerator waveSpawner()
     {
-        waveIsDone = false;
-
-        for(int i = 0; i < enemyCount; i++)
+        
+        if(waveCount <= 5)
         {
-            GameObject enemyClone = Instantiate(enemy, transform.position, Quaternion.identity);
-            yield return new WaitForSeconds(spawnRate);
+            waveIsDone = false;
+
+            for (int i = 0; i < enemyCount; i++)
+            {
+                GameObject enemyClone = Instantiate(enemy, transform.position, Quaternion.identity);
+                yield return new WaitForSeconds(spawnRate);
+            }
+
+            spawnRate -= 0.1f;
+            enemyCount += 3;
+            waveCount += 1;
+
+            yield return new WaitForSeconds(timeBetweenWaves);
+
+            waveIsDone = true;
         }
-
-        spawnRate -= 0.1f;
-        enemyCount += 3;
-
-        yield return new WaitForSeconds(timeBetweenWaves);
-
-        waveIsDone = true;
+        
     }
     
 }
