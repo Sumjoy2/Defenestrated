@@ -42,7 +42,7 @@ public class Granade : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D target)
     {
-        if (target.tag == "Enemy" || target.tag == "Boss") StartCoroutine(Explode(0));
+        if (target.tag == "Enemy" | target.tag == "Boss") StartCoroutine(Explode(0));
     }
     
 }

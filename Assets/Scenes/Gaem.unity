@@ -890,6 +890,10 @@ PrefabInstance:
       value: 0.382
       objectReference: {fileID: 0}
     - target: {fileID: 4954593276299215345, guid: fcdc2de1e42099c41bef2f38a1d3a2f3, type: 3}
+      propertyPath: damage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4954593276299215345, guid: fcdc2de1e42099c41bef2f38a1d3a2f3, type: 3}
       propertyPath: granade
       value: 
       objectReference: {fileID: 2187544520465602695, guid: 2799f5de7913d28419fc8b706f23f7cf, type: 3}

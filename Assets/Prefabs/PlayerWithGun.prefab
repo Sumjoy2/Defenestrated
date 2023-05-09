@@ -148,12 +148,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   curHealth: 0
-  damage: 20
+  damage: 15
   healthBar: {fileID: 0}
   healthPoints: {fileID: 0}
   Save: 1
   expirence: 0
   speed: 3.5
+  granade: {fileID: 2187544520465602695, guid: 2799f5de7913d28419fc8b706f23f7cf, type: 3}
 --- !u!114 &-1537365913789866900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,7 +198,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5007189489684319459}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.243, y: 0.247, z: 0}
+  m_LocalPosition: {x: -0.243, y: 0.382, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9146638359060817232}

@@ -47,7 +47,6 @@ public class Player : MonoBehaviour
         curHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
 
-        
 
         if (Instance != null)
         {
@@ -59,8 +58,6 @@ public class Player : MonoBehaviour
             Instance = this;
             GameObject.DontDestroyOnLoad(this.gameObject);
         }
-
-        //playerWithGun = transform.FindChild("GunForPlayer");
 
         //saves player inventory/HUD elements 
     }
@@ -98,6 +95,13 @@ public class Player : MonoBehaviour
         float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg -90f;
         //I dont understand why this works but when i put the quaternion into your equation it didnt - Sage
         transform.rotation = Quaternion.AngleAxis(angle + 90, Vector3.forward);
+
+        //Destroys on game menu
+        if (SceneManager.GetActiveScene().name == "Menu")
+        {
+            Destroy(this.gameObject);
+            return;
+        }
     }
 
     private void LoadScene(string sceneName)
