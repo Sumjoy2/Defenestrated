@@ -16,7 +16,6 @@ public class Enemy : MonoBehaviour
     public int curHealth;
     public int damage = 20;
 
-    private bool explosion;
 
     public GameObject healing;
 
@@ -35,11 +34,6 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        //Vector3 direction = player.position - transform.position;
-        //float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        //rb.rotation = angle;
-        //direction.Normalize();
         //movement = direction;
 
         if(player!= null)
@@ -52,7 +46,7 @@ public class Enemy : MonoBehaviour
         {
             Destroy(gameObject);
             int q = Random.Range(1, 100);
-            if (q > 25)
+            if (q < 25)
             {
                 Instantiate(healing, transform.position, Quaternion.identity);
             }
@@ -83,16 +77,5 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int dmg)
     {
         curHealth -= dmg;
-
-        if (!explosion)
-        {          
-            curHealth -= 100;
-        }
-    }
-
-    IEnumerator CoolDown()
-    {
-        yield return new WaitForSeconds(.2f);
-        explosion = false;
     }
 }
