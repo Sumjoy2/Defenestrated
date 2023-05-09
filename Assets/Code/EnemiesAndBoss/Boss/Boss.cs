@@ -37,6 +37,8 @@ public class Boss : MonoBehaviour
     Animator animator;
 
     GameObject player;
+    private Player playerScip;
+    
     
     
     // Start is called before the first frame update
@@ -46,6 +48,7 @@ public class Boss : MonoBehaviour
         animator = GetComponent<Animator>();
 
         player = GameObject.Find("Player");
+        playerScip = player.GetComponent<Player>();
 
         //sets health bar and health
         helthCurrent = helthMax;
@@ -103,16 +106,18 @@ public class Boss : MonoBehaviour
     }
 
     //When the boss gets hit by something do this
-    private void OnCollisionEnter2D(Collision2D other)
+    void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log("Boss Got Hit" + other.otherCollider);
-        TakeDamage(player.GetComponent<Player>().damage); // grabs dmg from player
+        if (other.gameObject.CompareTag("PlayerProjectile") || other.gameObject.CompareTag("Bullet"))
+        { 
+            TakeDamage(playerScip.damage);
+        }
     }
 
     //boss takes damage, updates health bar
     public void TakeDamage(int dmg)
     {
-        if (isInvincible)
+        if (isInvincible == true)
         {
             return;
         }
