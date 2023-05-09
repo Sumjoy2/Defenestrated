@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     //current player health
     public int curHealth;
     public int damage = 20;
+    public bool ifInvincible = false;
     public HealthBar healthBar;
     public TextMeshProUGUI healthPoints;
 
@@ -30,7 +31,6 @@ public class Player : MonoBehaviour
 
     float generalTimer;
     float invincibleTimer;
-    bool isInvincible = false;
 
     Rigidbody2D rigidbody2d;
 
@@ -143,7 +143,8 @@ public class Player : MonoBehaviour
     //Does All Health Stuffs
     public void TakeDamage(int dmg)
     {
-        if (isInvincible)
+
+        if (ifInvincible)
         {
             return;
         }

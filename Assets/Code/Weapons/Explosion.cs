@@ -33,13 +33,18 @@ public class Explosion : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+        Debug.Log("HIT: " + other.gameObject.tag);
         if (other.gameObject.tag == ("Enemy"))
         {
             other.gameObject.GetComponent<Enemy>().TakeDamage(dmg);
         }
+        //TagNotWorkWhy
         else if (other.gameObject.tag == ("Boss"))
         {
+            Debug.Log("Explodied Boss");
+            /*Boss = GameObject.FindGameObjectWithTag("Boss");*/
             other.gameObject.GetComponent<Boss>().TakeDamage(dmg);
+            Debug.Log("Explodied Boss");
         }
     }
 }
