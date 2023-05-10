@@ -16,7 +16,6 @@ public class Enemy : MonoBehaviour
     public int curHealth;
     public int damage = 20;
 
-
     public GameObject healing;
 
 
