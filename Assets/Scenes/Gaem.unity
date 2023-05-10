@@ -837,6 +837,14 @@ PrefabInstance:
       propertyPath: slots.Array.data[4]
       value: 
       objectReference: {fileID: 1589278510}
+    - target: {fileID: 1630975924925399944, guid: fcdc2de1e42099c41bef2f38a1d3a2f3, type: 3}
+      propertyPath: m_Pitch
+      value: 0.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630975924925399944, guid: fcdc2de1e42099c41bef2f38a1d3a2f3, type: 3}
+      propertyPath: m_Volume
+      value: 0.344
+      objectReference: {fileID: 0}
     - target: {fileID: 3510883147733315939, guid: fcdc2de1e42099c41bef2f38a1d3a2f3, type: 3}
       propertyPath: m_Name
       value: Player
