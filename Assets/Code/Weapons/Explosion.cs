@@ -47,4 +47,9 @@ public class Explosion : MonoBehaviour
             Debug.Log("Explodied Boss");
         }
     }
+
+    public void DestroyTheExplosion()
+    {
+        Destroy(gameObject);
+    }
 }
