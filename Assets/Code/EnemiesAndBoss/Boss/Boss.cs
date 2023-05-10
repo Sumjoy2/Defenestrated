@@ -108,9 +108,13 @@ public class Boss : MonoBehaviour
     //When the boss gets hit by something do this
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("PlayerProjectile") || other.gameObject.CompareTag("Bullet"))
+        if (other.gameObject.CompareTag("Bullet"))
         { 
             TakeDamage(playerScip.damage);
+        }
+        else if (other.gameObject.CompareTag("PlayerProjectile"))
+        { 
+            TakeDamage(100);
         }
     }
 

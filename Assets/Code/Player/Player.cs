@@ -69,12 +69,7 @@ public class Player : MonoBehaviour
         vertical = Input.GetAxis("Vertical");
 
         moveDirection = new Vector2(horizontal, vertical).normalized;
-        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-        if (Input.GetButtonDown("Submit"))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
+        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);       
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
