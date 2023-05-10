@@ -8,7 +8,12 @@ public class Gun : MonoBehaviour
     public GameObject bulletPrefab;
     public float bulletForce = 10f;
     public int range;
+    private AudioSource source;
 
+    void Start()
+    {
+        source = GetComponent<AudioSource>();
+    }
 
     void Update()
     {
@@ -22,6 +27,7 @@ public class Gun : MonoBehaviour
 
     public bool Fire()
     {
+        source.Play();
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         bullet.GetComponent<Rigidbody2D>().AddRelativeForce(new Vector3(Random.Range(-range, range), 300, 0)); // makes go zoom
         return true;
