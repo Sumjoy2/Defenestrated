@@ -36,6 +36,7 @@ public class MenuButtons : MonoBehaviour
         SceneManager.LoadScene("Gaem");
         playerScip.curHealth = playerScip.maxHealth;
         playerScip.TakeDamage(0);
+        player.transform.position =new Vector2 (0, 0);
         loseCanvas.SetActive(false);
     }
 }

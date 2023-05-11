@@ -7,13 +7,13 @@ public class Church : MonoBehaviour
 {
     private GameObject player;
 
-    public GameObject spawner;
+    private Spawner spawnScript;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        spawner = GameObject.FindGameObjectWithTag("Spawner");
+        spawnScript = GameObject.FindObjectOfType<Spawner>();
     }
 
     // Update is called once per frame
@@ -26,7 +26,7 @@ public class Church : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if(spawner.waveIsDone == true)
+            if(spawnScript.waveCount > 5)
             {
                 SceneManager.LoadScene("Bossfight");
             }

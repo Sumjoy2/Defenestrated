@@ -141,7 +141,6 @@ public class Player : MonoBehaviour
             {
                 PauseGame();
                 lose.SetActive(true);
-                Destroy(this.gameObject);
                 return;
             }
         }
