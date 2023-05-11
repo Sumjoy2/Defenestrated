@@ -112,9 +112,15 @@ public class Boss : MonoBehaviour
         { 
             TakeDamage(playerScip.damage);
         }
-        else if (other.gameObject.CompareTag("PlayerProjectile"))
-        { 
-            TakeDamage(100);
+        
+    }
+
+    //if it touches the grenade, it takes dmg
+    private void OnTriggerEnter2D(Collider2D target)
+    {
+        if (target.gameObject.CompareTag("Grenade"))
+        {
+            TakeDamage(50);
         }
     }
 

@@ -7,13 +7,13 @@ public class Explosion : MonoBehaviour
     public float radius = 3;
     public int dmg = 100;
     private GameObject Enemy;
-    private GameObject Boss;
+    private GameObject boss;
 
     // Start is called before the first frame update
     void Start()
     {
         Enemy = GameObject.FindGameObjectWithTag("Enemy");
-        Boss = GameObject.FindGameObjectWithTag("Boss");
+        boss = GameObject.FindGameObjectWithTag("Boss");
     }
 
     // Update is called once per frame
@@ -39,12 +39,11 @@ public class Explosion : MonoBehaviour
             other.gameObject.GetComponent<Enemy>().TakeDamage(dmg);
         }
         //TagNotWorkWhy
-        else if (other.gameObject.tag == ("Boss"))
+        if (other.gameObject.tag == ("Boss"))
         {
             Debug.Log("Explodied Boss");
-            /*Boss = GameObject.FindGameObjectWithTag("Boss");*/
+            //Boss = GameObject.FindGameObjectWithTag("Boss");
             other.gameObject.GetComponent<Boss>().TakeDamage(dmg);
-            Debug.Log("Explodied Boss");
         }
     }
 

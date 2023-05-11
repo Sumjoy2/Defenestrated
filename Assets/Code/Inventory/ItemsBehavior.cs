@@ -49,8 +49,16 @@ public class ItemsBehavior : MonoBehaviour
     //heals player when heal is used in inventory
     public void UseHealth()
     {
-        player.TakeDamage(-20);
-        Destroy(gameObject);
+        if (player.curHealth < 100)
+        {
+            player.TakeDamage(-20);
+            Destroy(gameObject);
+        }
+        else
+        {
+            return;
+        }
+        
     }
 
     public void UseGranade()

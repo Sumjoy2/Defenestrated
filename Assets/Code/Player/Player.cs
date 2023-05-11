@@ -39,6 +39,12 @@ public class Player : MonoBehaviour
 
     public GameObject granade;
 
+    //delay for stupid grenade
+    private bool grenadeOnCooldown = false;
+
+    public GameObject lose;
+    public GameObject playerStuff;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +52,8 @@ public class Player : MonoBehaviour
         rigidbody2d = GetComponent<Rigidbody2D>();
         curHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+
+        lose.SetActive(false);
 
 
         if (Instance != null)
@@ -71,9 +79,10 @@ public class Player : MonoBehaviour
         moveDirection = new Vector2(horizontal, vertical).normalized;
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);       
 
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q) && !grenadeOnCooldown)
         {
             Instantiate(granade, transform.position, Quaternion.identity);
+            StartCoroutine(KeyCooldown());
         }
     }
 
@@ -104,6 +113,16 @@ public class Player : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
+    private IEnumerator KeyCooldown()
+    {
+        grenadeOnCooldown = true;
+
+        // Replace 1f with your desired cooldown duration
+        yield return new WaitForSeconds(3f);
+
+        grenadeOnCooldown = false;
+    }
+
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("BossProt") || other.gameObject.CompareTag("Enemy"))
@@ -117,19 +136,14 @@ public class Player : MonoBehaviour
                  TakeDamage(other.gameObject.GetComponent<Enemy>().damage);
              }
 
+             //when player dies, game stops and u get a lose menu
             if (curHealth <= 0)
             {
                 PauseGame();
-                /*
-                if (Input.GetMouseButtonDown(0))
-                {
-                    gun.Fire() = false;
-                }
-                if (Input.GetMouseButtonUp(0))
-                {
-                    gun.Fire() = false;
-                }
-                */
+                lose.SetActive(true);
+                Destroy(this.gameObject);
+                Destroy(playerStuff);
+                return;
             }
         }
               
