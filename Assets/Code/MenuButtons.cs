@@ -7,7 +7,14 @@ public class MenuButtons : MonoBehaviour
 {
 
     public GameObject loseCanvas;
+    GameObject player;
+    private Player playerScip;
 
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerScip = player.GetComponent<Player>();
+    }
 
     public void LoadScene(string sceneName)
     {
@@ -27,6 +34,8 @@ public class MenuButtons : MonoBehaviour
     {
         // Disable the Canvas GameObject
         SceneManager.LoadScene("Gaem");
+        playerScip.curHealth = playerScip.maxHealth;
+        playerScip.TakeDamage(0);
         loseCanvas.SetActive(false);
     }
 }
