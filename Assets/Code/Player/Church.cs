@@ -5,13 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class Church : MonoBehaviour
 {
-    private Transform player;
-    private Vector3 targetPosition;
+    private GameObject player;
+
+    public GameObject spawner;
 
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        player = GameObject.FindGameObjectWithTag("Player");
+        spawner = GameObject.FindGameObjectWithTag("Spawner");
     }
 
     // Update is called once per frame
@@ -24,8 +26,12 @@ public class Church : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene("Bossfight");
-            player.position = targetPosition;
+            if(spawner.waveIsDone == true)
+            {
+                SceneManager.LoadScene("Bossfight");
+            }
+            
+            //player.position = targetPosition;
         }
     }
 }

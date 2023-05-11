@@ -10,7 +10,7 @@ public class Spawner : MonoBehaviour
     public int enemyCount;
     public int waveCount = 0;
     public GameObject enemy;
-    bool waveIsDone = true;
+    public bool waveIsDone = true;
 
     void Update()
     {
