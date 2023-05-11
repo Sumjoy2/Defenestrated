@@ -12,6 +12,7 @@ TagManager:
   - Bullet
   - HealthBar
   - Grenade
+  - Spawner
   layers:
   - Default
   - TransparentFX

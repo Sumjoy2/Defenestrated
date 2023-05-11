@@ -24,7 +24,7 @@ public class Spawner : MonoBehaviour
     IEnumerator waveSpawner()
     {
         
-        if(waveCount <= 5)
+        if(waveCount <= 3)
         {
             waveIsDone = false;
 

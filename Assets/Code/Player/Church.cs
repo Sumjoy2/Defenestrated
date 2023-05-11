@@ -26,9 +26,10 @@ public class Church : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if(spawnScript.waveCount > 5)
+            if(spawnScript.waveCount > 3)
             {
                 SceneManager.LoadScene("Bossfight");
+                player.transform.position = new Vector2(0, -1.5f);
             }
             
             //player.position = targetPosition;

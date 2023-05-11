@@ -257,7 +257,7 @@ GameObject:
   - component: {fileID: 38503331}
   m_Layer: 0
   m_Name: EnemySpawner (1)
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -279,6 +279,7 @@ MonoBehaviour:
   enemyCount: 0
   waveCount: 0
   enemy: {fileID: 2076281822836214175, guid: cf454dec5c4beff4c9a97aebc617786f, type: 3}
+  waveIsDone: 1
 --- !u!4 &38503332
 Transform:
   m_ObjectHideFlags: 0
@@ -1004,7 +1005,7 @@ GameObject:
   - component: {fileID: 304584948}
   m_Layer: 0
   m_Name: EnemySpawner
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1040,6 +1041,7 @@ MonoBehaviour:
   enemyCount: 0
   waveCount: 0
   enemy: {fileID: 2076281822836214175, guid: cf454dec5c4beff4c9a97aebc617786f, type: 3}
+  waveIsDone: 1
 --- !u!1001 &326701166
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30636,7 +30638,7 @@ GameObject:
   - component: {fileID: 1551684725}
   m_Layer: 0
   m_Name: spawner
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31488,7 +31490,7 @@ GameObject:
   - component: {fileID: 1870965853}
   m_Layer: 0
   m_Name: EnemySpawner (2)
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31510,6 +31512,7 @@ MonoBehaviour:
   enemyCount: 0
   waveCount: 0
   enemy: {fileID: 2076281822836214175, guid: cf454dec5c4beff4c9a97aebc617786f, type: 3}
+  waveIsDone: 1
 --- !u!4 &1870965854
 Transform:
   m_ObjectHideFlags: 0
