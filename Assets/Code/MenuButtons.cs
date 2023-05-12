@@ -12,8 +12,12 @@ public class MenuButtons : MonoBehaviour
 
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-        playerScip = player.GetComponent<Player>();
+        if(SceneManager.GetActiveScene().name != "Menu")
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+            playerScip = player.GetComponent<Player>();
+        }
+        
     }
 
     public void LoadScene(string sceneName)
