@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
     public GameObject granade;
 
     //delay for stupid grenade
-    private bool grenadeOnCooldown = false;
+    public bool grenadeOnCooldown = false;
 
     public GameObject lose;
     public GameObject playerStuff;
@@ -83,7 +83,7 @@ public class Player : MonoBehaviour
         {
             Instantiate(granade, transform.position, Quaternion.identity);
             StartCoroutine(KeyCooldown());
-        }
+        }        
     }
 
     void FixedUpdate()
