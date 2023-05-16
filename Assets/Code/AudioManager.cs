@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class AudioManager : MonoBehaviour
 {
@@ -23,5 +24,44 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-   
+   public void playMusic()
+   {
+        Sound s = Array.Find(musicSound, x => x.name == name);
+
+        if(s == null)
+        {
+            Debug.Log("Sound Not Found");
+        }
+
+        else
+        {
+            musicSource.clip = s.clip;
+            musicSource.Play();
+        }
+   }
+
+    public void playeSFX()
+    {
+        Sound s = Array.Find(sfxSounds, x => x.name == name);
+
+        if (s == null)
+        {
+            Debug.Log("Sound Not Found");
+        }
+
+        else
+        {
+            sfxSource.PlayOneShot(s.clip);
+        }
+    }
+
+    public void MusicVolume(float volume)
+    {
+        musicSource.volume = volume;
+    }
+
+    public void SFXVolume(float volume)
+    {
+        sfxSource.volume = volume;
+    }
 }
