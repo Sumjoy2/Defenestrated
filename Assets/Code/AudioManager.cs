@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -24,7 +25,20 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-   public void playMusic()
+    private void Start()
+    {
+        playMusic("menu");
+    }
+
+    private void Update()
+    {
+        if(SceneManager.GetActiveScene().name != "Menu" && SceneManager.GetActiveScene().name != "Options")
+        {
+            playMusic("game");
+        }
+    }
+
+    public void playMusic(string name)
    {
         Sound s = Array.Find(musicSound, x => x.name == name);
 
@@ -40,7 +54,7 @@ public class AudioManager : MonoBehaviour
         }
    }
 
-    public void playeSFX()
+    public void playeSFX(string name)
     {
         Sound s = Array.Find(sfxSounds, x => x.name == name);
 
