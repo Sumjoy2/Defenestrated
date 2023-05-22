@@ -1229,7 +1229,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4954593276299215345, guid: fcdc2de1e42099c41bef2f38a1d3a2f3, type: 3}
       propertyPath: Save
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4954593276299215345, guid: fcdc2de1e42099c41bef2f38a1d3a2f3, type: 3}
       propertyPath: lose
@@ -1261,7 +1261,7 @@ PrefabInstance:
       objectReference: {fileID: 590313800}
     - target: {fileID: 4954593276299215345, guid: fcdc2de1e42099c41bef2f38a1d3a2f3, type: 3}
       propertyPath: ifInvincible
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4954593276299215345, guid: fcdc2de1e42099c41bef2f38a1d3a2f3, type: 3}
       propertyPath: isInvincible
