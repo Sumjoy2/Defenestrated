@@ -67,24 +67,6 @@ public class Boss : MonoBehaviour
             //Randomly Selects 1 attack from the attack list
             randomattak = Random.Range(0, attacks.Length);
 
-            //Targets Player
-            
-            /*//fireball
-            if (randomattak == 0)
-            {
-                LaunchFireBall();
-            }
-            //suommon enemy
-            else if (randomattak == 1)
-            {
-                SummonEnemies();
-            }
-            //teleportation
-            else if (canTeleport == true && randomattak == 2 && teleportTime <= 0)
-            {
-                Teleport();
-            }*/
-
             timerTimer = timeTime;
         }
         //timer countdown
@@ -155,6 +137,7 @@ public class Boss : MonoBehaviour
     void Teleport()
     {
         rigidbody2d.position = Random.insideUnitCircle * 5;
+        teleportTime = cooldownTeleport;
         Debug.Log("Teleported");
     }
 

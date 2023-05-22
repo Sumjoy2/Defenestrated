@@ -84,6 +84,11 @@ public class Player : MonoBehaviour
             Instantiate(granade, transform.position, Quaternion.identity);
             StartCoroutine(KeyCooldown());
         }        
+
+        if (Input.GetKeyDown(KeyCode.KeypadEnter))
+        {
+            SceneManager.LoadScene("Bossfight");
+        }
     }
 
     void FixedUpdate()

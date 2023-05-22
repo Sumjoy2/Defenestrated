@@ -20,10 +20,11 @@ public class AttakAngy : StateMachineBehaviour
         if (script.randomattak == 1)
         {
             animator.SetTrigger("SummonEnemies");
-        }
-        if (script.teleportTime < 0)
-        {
-            animator.SetTrigger("Teleport");
+
+            if (script.teleportTime <= 0)
+            {
+                animator.SetTrigger("Teleport");
+            }
         }
     }
 
@@ -31,6 +32,5 @@ public class AttakAngy : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.ResetTrigger("SummonEnemies");
-
     }
 }
