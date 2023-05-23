@@ -271,6 +271,48 @@ MonoBehaviour:
       m_Height: 14
     m_Scale: 1
     m_AtlasIndex: 0
+  - m_Index: 48
+    m_Metrics:
+      m_Width: 55.1875
+      m_Height: 79.109375
+      m_HorizontalBearingX: 4.703125
+      m_HorizontalBearingY: 79.109375
+      m_HorizontalAdvance: 64.59375
+    m_GlyphRect:
+      m_X: 415
+      m_Y: 10
+      m_Width: 56
+      m_Height: 80
+    m_Scale: 1
+    m_AtlasIndex: 0
+  - m_Index: 72
+    m_Metrics:
+      m_Width: 35.25
+      m_Height: 59.953125
+      m_HorizontalBearingX: 3.421875
+      m_HorizontalBearingY: 58.671875
+      m_HorizontalAdvance: 41.3125
+    m_GlyphRect:
+      m_X: 302
+      m_Y: 88
+      m_Width: 36
+      m_Height: 61
+    m_Scale: 1
+    m_AtlasIndex: 0
+  - m_Index: 88
+    m_Metrics:
+      m_Width: 36.25
+      m_Height: 58.625
+      m_HorizontalBearingX: 3.828125
+      m_HorizontalBearingY: 57.34375
+      m_HorizontalAdvance: 44.203125
+    m_GlyphRect:
+      m_X: 357
+      m_Y: 90
+      m_Width: 38
+      m_Height: 60
+    m_Scale: 1
+    m_AtlasIndex: 0
   m_CharacterTable:
   - m_ElementType: 1
     m_Unicode: 79
@@ -307,6 +349,18 @@ MonoBehaviour:
   - m_ElementType: 1
     m_Unicode: 8230
     m_GlyphIndex: 401
+    m_Scale: 1
+  - m_ElementType: 1
+    m_Unicode: 77
+    m_GlyphIndex: 48
+    m_Scale: 1
+  - m_ElementType: 1
+    m_Unicode: 101
+    m_GlyphIndex: 72
+    m_Scale: 1
+  - m_ElementType: 1
+    m_Unicode: 117
+    m_GlyphIndex: 88
     m_Scale: 1
   m_AtlasTextures:
   - {fileID: 28256370963634744}
@@ -350,43 +404,71 @@ MonoBehaviour:
     m_Y: 0
     m_Width: 57
     m_Height: 80
+  - m_X: 405
+    m_Y: 0
+    m_Width: 75
+    m_Height: 99
+  - m_X: 292
+    m_Y: 78
+    m_Width: 55
+    m_Height: 80
+  - m_X: 347
+    m_Y: 80
+    m_Width: 57
+    m_Height: 79
   m_FreeGlyphRects:
-  - m_X: 0
-    m_Y: 128
-    m_Width: 1023
-    m_Height: 895
   - m_X: 128
     m_Y: 29
     m_Width: 7
     m_Height: 994
   - m_X: 56
-    m_Y: 126
-    m_Width: 967
-    m_Height: 897
-  - m_X: 128
-    m_Y: 102
-    m_Width: 895
-    m_Height: 921
-  - m_X: 56
     m_Y: 33
     m_Width: 24
     m_Height: 990
+  - m_X: 480
+    m_Y: 0
+    m_Width: 543
+    m_Height: 1023
+  - m_X: 0
+    m_Y: 128
+    m_Width: 292
+    m_Height: 895
+  - m_X: 56
+    m_Y: 126
+    m_Width: 236
+    m_Height: 897
+  - m_X: 128
+    m_Y: 102
+    m_Width: 164
+    m_Height: 921
   - m_X: 201
     m_Y: 96
-    m_Width: 822
+    m_Width: 91
     m_Height: 927
   - m_X: 236
     m_Y: 80
-    m_Width: 787
-    m_Height: 943
-  - m_X: 292
-    m_Y: 78
     m_Width: 56
-    m_Height: 945
-  - m_X: 405
-    m_Y: 0
-    m_Width: 618
-    m_Height: 1023
+    m_Height: 943
+  - m_X: 0
+    m_Y: 159
+    m_Width: 1023
+    m_Height: 864
+  - m_X: 0
+    m_Y: 158
+    m_Width: 347
+    m_Height: 865
+  - m_X: 347
+    m_Y: 78
+    m_Width: 1
+    m_Height: 2
+  - m_X: 404
+    m_Y: 99
+    m_Width: 619
+    m_Height: 924
+  - m_X: 404
+    m_Y: 80
+    m_Width: 1
+    m_Height: 943
   m_fontInfo:
     Name: Oswald
     PointSize: 71

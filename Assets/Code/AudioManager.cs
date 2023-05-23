@@ -30,9 +30,9 @@ public class AudioManager : MonoBehaviour
         playMusic("menu");
     }
 
-    private void Update()
+    void Update()
     {
-        if(SceneManager.GetActiveScene().name != "Menu" && SceneManager.GetActiveScene().name != "Options")
+        if(SceneManager.GetActiveScene().name == "Gaem")
         {
             playMusic("game");
         }
