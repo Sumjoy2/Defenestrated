@@ -85,9 +85,11 @@ public class Player : MonoBehaviour
             StartCoroutine(KeyCooldown());
         }        
 
+        //to be able to skip to boss
         if (Input.GetKeyDown(KeyCode.KeypadEnter))
         {
             SceneManager.LoadScene("Bossfight");
+            transform.position = new Vector2(0, -3.7f);
         }
     }
 
