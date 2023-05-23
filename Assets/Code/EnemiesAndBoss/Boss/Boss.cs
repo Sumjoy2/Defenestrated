@@ -84,6 +84,7 @@ public class Boss : MonoBehaviour
             //load scene win
             PauseGame();
             Win.SetActive(true);
+            return;
         }
     }
 

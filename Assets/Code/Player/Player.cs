@@ -91,6 +91,13 @@ public class Player : MonoBehaviour
             SceneManager.LoadScene("Bossfight");
             transform.position = new Vector2(0, -3.7f);
         }
+
+        //Destroys on game menu
+        if (SceneManager.GetActiveScene().name == "Menu")
+        {
+            Destroy(this.gameObject);
+            return;
+        }
     }
 
     void FixedUpdate()
@@ -107,12 +114,7 @@ public class Player : MonoBehaviour
         //I dont understand why this works but when i put the quaternion into your equation it didnt - Sage
         transform.rotation = Quaternion.AngleAxis(angle + 90, Vector3.forward);
 
-        //Destroys on game menu
-        if (SceneManager.GetActiveScene().name == "Menu")
-        {
-            Destroy(this.gameObject);
-            return;
-        }
+        
     }
 
     private void LoadScene(string sceneName)
