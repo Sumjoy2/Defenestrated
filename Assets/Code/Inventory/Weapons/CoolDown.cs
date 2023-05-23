@@ -25,7 +25,7 @@ public class CoolDown : MonoBehaviour
 
     void Cool()
     {
-        if (player.grenadeOnCooldown == true && isCoolDown == false)
+        if (Input.GetKey(KeyCode.Q) && isCoolDown == false)
         {
             isCoolDown = true;
             grenade.fillAmount = 1;
