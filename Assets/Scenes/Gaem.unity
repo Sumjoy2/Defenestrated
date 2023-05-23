@@ -2666,7 +2666,7 @@ GameObject:
   - component: {fileID: 1181799698}
   - component: {fileID: 1181799700}
   m_Layer: 5
-  m_Name: GrenadeTimer (1)
+  m_Name: GrenadeTimer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
