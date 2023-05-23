@@ -84,6 +84,13 @@ public class Player : MonoBehaviour
             Instantiate(granade, transform.position, Quaternion.identity);
             StartCoroutine(KeyCooldown());
         }        
+
+        //to be able to skip to boss
+        if (Input.GetKeyDown(KeyCode.KeypadEnter))
+        {
+            SceneManager.LoadScene("Bossfight");
+            transform.position = new Vector2(0, -3.7f);
+        }
     }
 
     void FixedUpdate()
