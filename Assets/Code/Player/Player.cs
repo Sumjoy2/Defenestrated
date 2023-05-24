@@ -46,10 +46,10 @@ public class Player : MonoBehaviour
     public GameObject playerStuff;
 
 
-    private void Awake()
+    /*private void Awake()
     {
         AudioManager.Instance.playMusic("game");
-    }
+    }*/
 
     // Start is called before the first frame update
     void Start()
