@@ -125,7 +125,6 @@ public class Boss : MonoBehaviour
             return;
         }
 
-        
         helthCurrent -= dmg;
         HPText.text = helthCurrent.ToString();
         healthBar.SetHealth(helthCurrent);
