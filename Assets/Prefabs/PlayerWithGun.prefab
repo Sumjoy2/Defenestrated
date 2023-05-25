@@ -157,6 +157,9 @@ MonoBehaviour:
   expirence: 0
   speed: 3.5
   granade: {fileID: 2187544520465602695, guid: 2799f5de7913d28419fc8b706f23f7cf, type: 3}
+  grenadeOnCooldown: 0
+  lose: {fileID: 0}
+  playerStuff: {fileID: 0}
 --- !u!114 &-1537365913789866900
 MonoBehaviour:
   m_ObjectHideFlags: 0

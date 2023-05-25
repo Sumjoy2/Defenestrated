@@ -8,6 +8,8 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
 
+    private AudioSource audioSource;
+
     public Sound[] musicSound, sfxSounds;
     public AudioSource musicSource, sfxSource;
     
@@ -27,16 +29,33 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+
         playMusic("menu");
+
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    void Update()
-    {
-        if(SceneManager.GetActiveScene().buildIndex == 4)
-        {
-            playMusic("game");           
-        }
+    //void Update()
+    //{
+    //    if(SceneManager.GetActiveScene().name == "Gaem")
+    //    {
+    //        playMusic("game");           
+    //    }
         
+    //}
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        switch (scene.name)
+        {
+            case "Gaem":
+                playMusic("game");
+                break;           
+            default:
+                playMusic("menu");
+                break;
+        }
     }
 
     public void playMusic(string name)
