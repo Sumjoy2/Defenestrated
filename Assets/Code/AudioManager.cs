@@ -32,10 +32,11 @@ public class AudioManager : MonoBehaviour
 
     void Update()
     {
-        if(SceneManager.GetActiveScene().name == "Gaem")
+        if(SceneManager.GetActiveScene().buildIndex == 4)
         {
-            playMusic("game");
+            playMusic("game");           
         }
+        
     }
 
     public void playMusic(string name)

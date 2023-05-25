@@ -46,14 +46,11 @@ public class Player : MonoBehaviour
     public GameObject playerStuff;
 
 
-    /*private void Awake()
-    {
-        AudioManager.Instance.playMusic("game");
-    }*/
 
     // Start is called before the first frame update
     void Start()
     {
+
         healthBar = GameObject.FindGameObjectWithTag("HealthBar").GetComponent<HealthBar>();
         rigidbody2d = GetComponent<Rigidbody2D>();
         curHealth = maxHealth;
