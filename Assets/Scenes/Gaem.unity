@@ -1262,7 +1262,7 @@ PrefabInstance:
     - target: {fileID: 4954593276299215345, guid: fcdc2de1e42099c41bef2f38a1d3a2f3, type: 3}
       propertyPath: SFX_Clips.Array.data[1]
       value: 
-      objectReference: {fileID: 8300000, guid: 2ee473fc8e1f82f438c263a9c13c4b72, type: 3}
+      objectReference: {fileID: 8300000, guid: 5be3f2f904abd584fbd0a4f562cc2664, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcdc2de1e42099c41bef2f38a1d3a2f3, type: 3}
 --- !u!1001 &388595875
@@ -31428,7 +31428,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c6758bde925a0aa4a85c772c852d9898, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
