@@ -45,7 +45,9 @@ public class Player : MonoBehaviour
     public GameObject lose;
     public GameObject playerStuff;
 
-
+    AudioSource audioData;
+    public AudioClip [] SFX_Clips;
+    Scene theScene;
 
     // Start is called before the first frame update
     void Start()
@@ -58,6 +60,8 @@ public class Player : MonoBehaviour
 
         lose.SetActive(false);
 
+        audioData = GetComponent<AudioSource>();
+       
 
         if (Instance != null)
         {
@@ -82,6 +86,17 @@ public class Player : MonoBehaviour
         moveDirection = new Vector2(horizontal, vertical).normalized;
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);       
 
+        if (horizontal != 0 || vertical != 0)
+        {
+            
+            if (!audioData.isPlaying) audioData.Play(0);
+        }
+        else
+        {
+            audioData.Stop();
+
+        }
+
         if (Input.GetKeyDown(KeyCode.Q) && !grenadeOnCooldown)
         {
             Instantiate(granade, transform.position, Quaternion.identity);
@@ -105,6 +120,17 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
+        // depending on scene, play diff sound clip
+        theScene = SceneManager.GetActiveScene();
+        if (theScene.name == "Gaem")
+        {
+            audioData.clip = SFX_Clips[0];  // grass
+        }
+        else if (theScene.name == "Bossfight")
+        {
+            audioData.clip = SFX_Clips[1];   // bricks
+        }
+
         Vector2 position = rigidbody2d.position;
         position.x = position.x + speed * horizontal * Time.deltaTime;
         position.y = position.y + speed * vertical * Time.deltaTime;
@@ -117,7 +143,6 @@ public class Player : MonoBehaviour
         //I dont understand why this works but when i put the quaternion into your equation it didnt - Sage
         transform.rotation = Quaternion.AngleAxis(angle + 90, Vector3.forward);
 
-        
     }
 
     private void LoadScene(string sceneName)
