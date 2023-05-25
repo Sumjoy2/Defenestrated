@@ -26,10 +26,7 @@ public class ataal : StateMachineBehaviour
             animator.SetTrigger("Laser");
         }
 
-        if (script.helthCurrent <= script.helthMax / 2)
-        {
-            animator.SetBool("Angy", true);
-        }
+        
     }
     
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

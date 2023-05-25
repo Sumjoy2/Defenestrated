@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Boss : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class Boss : MonoBehaviour
     public int helthMax = 1000;
     public int helthCurrent;
     public HealthBar healthBar;
+    public TextMeshProUGUI HPText;
 
     [Header("TimerStuff")]
     public float timerTimer = 5; // initial attack cooldown
@@ -79,11 +81,20 @@ public class Boss : MonoBehaviour
         {
             teleportTime -= Time.deltaTime;
         }
+
+        //enters phase 2 when at half health
+        if (helthCurrent <= helthMax / 2)
+        {
+            animator.SetBool("Angy", true);
+        }
+
+        //win game when boss health 0
         if (helthCurrent <= 0)
         {
             //load scene win
             PauseGame();
             Win.SetActive(true);
+            return;
         }
     }
 
@@ -113,7 +124,9 @@ public class Boss : MonoBehaviour
         {
             return;
         }
+
         helthCurrent -= dmg;
+        HPText.text = helthCurrent.ToString();
         healthBar.SetHealth(helthCurrent);
     }
 

@@ -29,7 +29,7 @@ public class Church : MonoBehaviour
             if(spawnScript.waveCount > 3)
             {
                 SceneManager.LoadScene("Bossfight");
-                player.transform.position = new Vector2(0, -1.5f);
+                player.transform.position = new Vector2(0, -3.7f);
             }
             
             //player.position = targetPosition;

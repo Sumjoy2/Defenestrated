@@ -9,6 +9,7 @@ public class CoolDown : MonoBehaviour
     public float coolDown = 3f;
     bool isCoolDown = false;
     public Player player;
+    public KeyCode grenadeButton;
     
     // Start is called before the first frame update
     void Start()
@@ -24,7 +25,7 @@ public class CoolDown : MonoBehaviour
 
     void Cool()
     {
-        if (player.grenadeOnCooldown == true && isCoolDown == false)
+        if (Input.GetKey(KeyCode.Q) && isCoolDown == false)
         {
             isCoolDown = true;
             grenade.fillAmount = 1;

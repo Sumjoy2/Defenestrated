@@ -52,6 +52,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         healthBar = GameObject.FindGameObjectWithTag("HealthBar").GetComponent<HealthBar>();
         rigidbody2d = GetComponent<Rigidbody2D>();
         curHealth = maxHealth;
@@ -102,9 +103,18 @@ public class Player : MonoBehaviour
             StartCoroutine(KeyCooldown());
         }        
 
+        //to be able to skip to boss
         if (Input.GetKeyDown(KeyCode.KeypadEnter))
         {
             SceneManager.LoadScene("Bossfight");
+            transform.position = new Vector2(0, -3.7f);
+        }
+
+        //Destroys on game menu
+        if (SceneManager.GetActiveScene().name == "Menu")
+        {
+            Destroy(this.gameObject);
+            return;
         }
     }
 
@@ -133,12 +143,6 @@ public class Player : MonoBehaviour
         //I dont understand why this works but when i put the quaternion into your equation it didnt - Sage
         transform.rotation = Quaternion.AngleAxis(angle + 90, Vector3.forward);
 
-        //Destroys on game menu
-        if (SceneManager.GetActiveScene().name == "Menu")
-        {
-            Destroy(this.gameObject);
-            return;
-        }
     }
 
     private void LoadScene(string sceneName)
