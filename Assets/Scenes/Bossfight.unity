@@ -7232,7 +7232,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1000
+  m_text: 2500
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
   m_sharedMaterial: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
@@ -7554,7 +7554,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isInvincible: 0
-  helthMax: 1000
+  helthMax: 2500
   helthCurrent: 0
   healthBar: {fileID: 2068150802}
   HPText: {fileID: 1207450063}
@@ -8055,7 +8055,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ' / 1000'
+  m_text: ' / 2500'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
   m_sharedMaterial: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
