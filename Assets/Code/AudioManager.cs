@@ -51,7 +51,10 @@ public class AudioManager : MonoBehaviour
         {
             case "Gaem":
                 playMusic("game");
-                break;           
+                break;
+            case "Bossfight":
+                playMusic("game");
+                break;
             default:
                 playMusic("menu");
                 break;
